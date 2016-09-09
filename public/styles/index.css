@@ -202,4 +202,13 @@ textarea {
 optgroup {
   font-weight: bold; }
 
-/*# sourceMappingURL=reset.css.map */
+.m-hotel {
+  padding: 0;
+  min-width: 300px;
+  max-width: 640px;
+  margin: 0 auto; }
+
+.swiper-slide img {
+  width: 100%; }
+
+/*# sourceMappingURL=index.css.map */
