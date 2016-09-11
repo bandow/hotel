@@ -5,12 +5,23 @@ requirejs.config({
     }
 });
 
-requirejs(['jquery','swiper'],function($,swiper){  
+requirejs(['jquery','common','swiper'],function($,common,swiper){  
     $(document).ready(function () {
        console.log("jquery已经调进来了");
-       var mySwiper = new Swiper('.swiper-container',{
-		  pagination : '.swiper-pagination',
-	   });
+        var mySwiper = new Swiper('#swiper-container0',{
+    		   pagination : '.swiper-pagination',
+           loop : true,
+           autoplay: 5000
+	      });
+       
+
+        var mySwiper1 = new Swiper('#swiper-container1',{
+          watchSlidesProgress : true,
+          watchSlidesVisibility : true,
+          spaceBetween : 10,
+          loop : true,
+        })
+
     });
     
 

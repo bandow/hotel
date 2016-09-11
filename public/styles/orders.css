@@ -1,0 +1,641 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2016-09-09
+* Version:0.0.1
+* ================================================================== */
+html {
+  font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, body {
+  /*-webkit-user-select:none禁止用户进行复制.选择.*/
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  /*使用min-height:100%代替height：100%*/
+  min-height: 100%; }
+
+body {
+  /*全局滚动 建议：将属性挂在body上，可以避免很多奇怪的bug。*/
+  -webkit-overflow-scrolling: touch; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background: transparent; }
+
+a:active, a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+.public-header {
+  padding: 0 3%;
+  height: 1rem;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  background: #fff; }
+  .public-header h1 {
+    margin: 0;
+    width: 100%;
+    margin: 0 -1rem;
+    text-align: center;
+    color: #008077;
+    float: left;
+    font: bold .5rem/1rem "Microsoft YaHei"; }
+  .public-header .color-h1 {
+    color: #4f4f4f;
+    font-weight: normal; }
+  .public-header .left {
+    float: left;
+    width: 1rem;
+    height: 1rem;
+    text-decoration: none; }
+    .public-header .left i {
+      color: #000;
+      font-size: .7rem;
+      line-height: 1rem;
+      display: block; }
+  .public-header .right {
+    float: right;
+    margin: .1rem;
+    width: .8rem;
+    height: .8rem;
+    text-decoration: none;
+    background: #4f4f4f;
+    border-radius: 100%; }
+    .public-header .right i {
+      color: #fff;
+      line-height: .8rem;
+      text-align: center;
+      display: block; }
+  .public-header .right1 {
+    float: right;
+    width: 1rem;
+    height: 1rem;
+    text-decoration: none; }
+    .public-header .right1 i {
+      color: #fff;
+      line-height: 1rem;
+      text-align: center;
+      display: block;
+      color: #4f4f4f;
+      font-size: .6rem; }
+
+.m-hotel {
+  padding: 0;
+  min-width: 300px;
+  max-width: 640px;
+  margin: 0 auto;
+  background: #f4f4f4;
+  padding-bottom: 1.2rem; }
+
+.m-hotel-live {
+  padding: 0;
+  min-width: 300px;
+  max-width: 640px;
+  margin: 0 auto;
+  background: #f4f4f4; }
+
+/*
+orders-submit
+*/
+.orders-text {
+  background: #fff;
+  padding: 2%;
+  margin: 2% 0; }
+  .orders-text img {
+    width: 40%;
+    float: left; }
+  .orders-text .text-r {
+    margin-left: 42%; }
+    .orders-text .text-r h2 {
+      font: .36rem/1.5 "Microsoft YaHei";
+      color: #008077; }
+    .orders-text .text-r p {
+      font: .33rem/1.5 "Microsoft YaHei";
+      color: #999; }
+    .orders-text .text-r .address {
+      font: .32rem/1.2 "Microsoft YaHei";
+      color: #999; }
+
+.orders-time {
+  background: #fff;
+  padding: 4% 2%;
+  margin: 2% 0;
+  height: auto;
+  overflow: hidden; }
+  .orders-time .left {
+    width: 50%;
+    float: left;
+    text-align: center; }
+    .orders-time .left i {
+      color: #3f3f3f;
+      font-size: .8rem; }
+    .orders-time .left p {
+      font: .4rem/2 "Microsoft YaHei";
+      color: #7e7e7e; }
+      .orders-time .left p span {
+        color: #008077; }
+  .orders-time .right {
+    width: 50%;
+    float: right;
+    text-align: center; }
+    .orders-time .right i {
+      color: #3f3f3f;
+      font-size: .8rem; }
+    .orders-time .right p {
+      font: .4rem/2 "Microsoft YaHei";
+      color: #7e7e7e; }
+      .orders-time .right p span {
+        color: #008077; }
+
+.orders-name {
+  margin: 6% 0 2%; }
+  .orders-name h3 {
+    font: .36rem/2 "Microsoft YaHei";
+    color: #393939;
+    text-align: center; }
+  .orders-name .name {
+    background: #fff;
+    height: auto;
+    overflow: hidden; }
+    .orders-name .name .names {
+      padding: 4% 2%;
+      margin: 2% 0;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: .5rem; }
+      .orders-name .name .names i {
+        width: 5%;
+        float: left;
+        color: #008077;
+        line-height: 1.08rem; }
+      .orders-name .name .names .names-right {
+        margin-left: 7%; }
+        .orders-name .name .names .names-right h5 {
+          font: .4rem/1.5 "Microsoft YaHei";
+          color: #000; }
+        .orders-name .name .names .names-right p {
+          font: .32rem/1.5 "Microsoft YaHei";
+          color: #696969; }
+    .orders-name .name .check-in {
+      text-align: center;
+      font: .4rem/1.5 "Microsoft YaHei";
+      color: #008077;
+      margin-top: .5rem;
+      padding-bottom: .5rem;
+      text-decoration: none;
+      display: block; }
+      .orders-name .name .check-in i {
+        margin-right: .2rem;
+        font-size: .36rem; }
+  .orders-name .orders-name-bottom {
+    font: .36rem/2 "Microsoft YaHei";
+    color: #393939;
+    padding: 0 2%; }
+    .orders-name .orders-name-bottom i {
+      color: #008077;
+      margin-right: .2rem; }
+    .orders-name .orders-name-bottom a {
+      color: #008077; }
+
+.orders-submit-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1rem;
+  background-color: #fff; }
+  .orders-submit-bottom span {
+    display: block;
+    width: 60%;
+    height: 1rem;
+    color: #008077;
+    font: .36rem/1rem "Microsoft YaHei";
+    float: left;
+    padding-left: 2%; }
+  .orders-submit-bottom a {
+    display: block;
+    width: 40%;
+    height: 1rem;
+    color: #fff;
+    font: .36rem/1rem "Microsoft YaHei";
+    background-color: #008077;
+    float: right;
+    text-align: center;
+    text-decoration: none; }
+
+/*
+orders-info
+*/
+.orders-info-top {
+  margin: 2% 0;
+  padding: 0 2%;
+  background-color: #fff;
+  height: auto;
+  overflow: hidden; }
+  .orders-info-top .title {
+    width: 100%;
+    height: 1rem;
+    font: .36rem/1rem "Microsoft YaHei";
+    color: #008077;
+    border-bottom: 1px solid #ccc; }
+    .orders-info-top .title i {
+      float: right;
+      color: #999; }
+  .orders-info-top .info-text {
+    padding: 2% 0;
+    height: auto;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc; }
+    .orders-info-top .info-text img {
+      width: 40%;
+      float: left; }
+    .orders-info-top .info-text .text-r {
+      margin-left: 42%; }
+      .orders-info-top .info-text .text-r .time {
+        font: .36rem/1.5 "Microsoft YaHei";
+        color: #008077; }
+      .orders-info-top .info-text .text-r p {
+        font: .33rem/1.5 "Microsoft YaHei";
+        color: #999; }
+        .orders-info-top .info-text .text-r p span {
+          color: #008077; }
+  .orders-info-top .contact {
+    border-bottom: 1px solid #ccc;
+    font: .36rem/1.5 "Microsoft YaHei";
+    color: #666;
+    padding: .3rem 0; }
+    .orders-info-top .contact a {
+      float: right;
+      color: #008077;
+      border: 1px solid #008077;
+      text-decoration: none;
+      padding: 0 .2rem; }
+  .orders-info-top .map {
+    margin: .2rem 0;
+    width: 100%;
+    height: 3rem;
+    overflow: hidden; }
+    .orders-info-top .map img {
+      width: 100%;
+      height: 100%; }
+
+.orders-info-com {
+  margin: .5rem 0 1rem; }
+  .orders-info-com h3 {
+    font: .36rem/1.5 "Microsoft YaHei";
+    color: #666;
+    text-align: center; }
+  .orders-info-com .info-name {
+    background-color: #fff;
+    margin: .2rem 0;
+    height: auto;
+    overflow: hidden;
+    padding: .5rem 2%; }
+    .orders-info-com .info-name .left {
+      font: .36rem/1.5 "Microsoft YaHei";
+      float: left;
+      width: 20%; }
+      .orders-info-com .info-name .left span {
+        float: left; }
+      .orders-info-com .info-name .left i {
+        float: left;
+        font-size: .32rem;
+        color: #008077;
+        margin-left: .1rem; }
+    .orders-info-com .info-name .con {
+      font: .32rem/1.5 "Microsoft YaHei";
+      float: left;
+      color: #999;
+      text-align: center; }
+    .orders-info-com .info-name .right {
+      font: .32rem/1.5 "Microsoft YaHei";
+      float: right;
+      color: #999;
+      width: 20%; }
+
+.orders-info-bottom {
+  padding: 0 2%; }
+  .orders-info-bottom a {
+    width: 25.3333%;
+    font: .36rem/1.5 "Microsoft YaHei";
+    display: block;
+    float: left;
+    text-align: center;
+    padding: .2rem 0;
+    border: 1px solid #008077;
+    color: #008077;
+    margin: 0 4%;
+    text-decoration: none; }
+    .orders-info-bottom a:last-child {
+      border: 1px solid #4c4c4c;
+      color: #4c4c4c; }
+
+/*
+orders-live
+*/
+.orders-info-top .contact-live {
+  border-bottom: 0; }
+
+.orders-live-icon {
+  margin: 2% 0;
+  background-color: #fff;
+  height: auto;
+  overflow: hidden; }
+  .orders-live-icon a {
+    float: left;
+    border: 1px solid #ccc;
+    border-top: 0;
+    border-left: 0;
+    width: 33.3333%;
+    padding: .5rem 0;
+    text-decoration: none; }
+    .orders-live-icon a img {
+      display: block;
+      width: 25%;
+      margin: 0 auto; }
+    .orders-live-icon a p {
+      font: .36rem/3 "Microsoft YaHei";
+      color: #696969;
+      text-align: center; }
+
+.orders-live-com {
+  margin: .2rem 0; }
+
+.orders-live-bottom {
+  padding: .2rem 2%;
+  background-color: #fff; }
+  .orders-live-bottom .map {
+    margin: .2rem 0;
+    width: 100%;
+    height: 3rem;
+    overflow: hidden; }
+    .orders-live-bottom .map img {
+      width: 100%;
+      height: 100%; }
+
+/*
+orders
+*/
+.my-pagination {
+  font-size: 0; }
+  .my-pagination span {
+    width: 50%;
+    height: 1rem;
+    text-align: center;
+    display: inline-block;
+    border-radius: 0;
+    background-color: #fff;
+    font: .4rem/1rem "Microsoft YaHei"; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background-color: #fff;
+  color: #008077;
+  border-bottom: 1px solid #008077;
+  opacity: 1; }
+
+.swiper-pagination-bullet {
+  color: #000;
+  opacity: 1; }
+
+.order-list {
+  position: relative;
+  margin: 2% 0;
+  background-color: #fff;
+  padding: 0 2%; }
+  .order-list h2 {
+    color: #454545;
+    font: .4rem/1rem "Microsoft YaHei";
+    border-bottom: 1px solid #ccc; }
+    .order-list h2 a {
+      color: #008077;
+      float: right;
+      text-decoration: none; }
+  .order-list .text-order {
+    padding: 2% 0;
+    height: auto;
+    overflow: hidden; }
+    .order-list .text-order img {
+      width: 36%;
+      float: left; }
+    .order-list .text-order .text-r {
+      margin-left: 38%; }
+      .order-list .text-order .text-r p {
+        font: .36rem/1.5 "Microsoft YaHei";
+        color: #838383; }
+      .order-list .text-order .text-r a {
+        color: #008077;
+        text-decoration: none;
+        border: 1px solid #008077;
+        font: .32rem/1.5 "Microsoft YaHei";
+        padding: .05rem 0;
+        text-align: center;
+        display: block;
+        width: 36%;
+        margin-top: .1rem;
+        float: left;
+        margin-right: .2rem; }
+    .order-list .text-order i {
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      color: #ccc;
+      -moz-transform: translate(0, 50%);
+      -o-transform: translate(0, 50%);
+      -ms-transform: translate(0, 50%);
+      -webkit-transform: translate(0, 50%);
+      transform: translate(0, 50%); }
+
+.no-order {
+  margin-top: 50%;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+  .no-order i {
+    color: #008077;
+    font-size: 2rem; }
+  .no-order h3 {
+    color: #008077;
+    font: .4rem/1.5 "Microsoft YaHei"; }
+  .no-order p {
+    font: .36rem/1.5 "Microsoft YaHei";
+    color: #666; }
+
+/*# sourceMappingURL=orders.css.map */

@@ -1,0 +1,446 @@
+@import "reset","variable","header";
+.m-hotel{
+	padding: 0;
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    background: #f4f4f4;
+    padding-bottom:1.2rem;
+}
+.m-hotel-live{
+	padding: 0;
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    background: #f4f4f4;
+}
+.container{}
+/*
+orders-submit
+*/
+.orders-text{
+      background:#fff;
+      padding:2%;
+      margin:2% 0;
+      img{
+      	width:40%;
+      	float:left;
+      }
+      .text-r{
+      	margin-left: 42%;
+      	h2{
+      		font:.36rem/1.5 "Microsoft YaHei";
+      		color:#008077;
+      	}
+      	p{
+      		font:.33rem/1.5 "Microsoft YaHei";
+      		color:#999;
+      	}
+      	.address{
+      		font:.32rem/1.2 "Microsoft YaHei";
+      		color:#999;
+      	}
+      }
+}
+.orders-time{
+	 background:#fff;
+     padding:4% 2%;
+     margin:2% 0;
+     height: auto;
+     overflow: hidden;
+     .left{
+     	width: 50%;
+     	float:left;
+     	text-align: center;
+     	i{
+     		color:#3f3f3f;
+     		font-size: .8rem;
+     	}
+     	p{
+     		font:.4rem/2 "Microsoft YaHei";
+      		color:#7e7e7e;
+      		span{
+      			color:#008077;
+      		}
+     	}
+     }
+      .right{
+     	width: 50%;
+     	float:right;
+     	text-align: center;
+     	i{
+     		color:#3f3f3f;
+     		font-size: .8rem;
+     	}
+     	p{
+     		font:.4rem/2 "Microsoft YaHei";
+      		color:#7e7e7e;
+      		span{
+      			color:#008077;
+      		}
+     	}
+     }
+}
+.orders-name{
+	 margin:6% 0 2%;
+
+	 h3{
+	 	font:.36rem/2 "Microsoft YaHei";
+	 	color:#393939;
+	 	text-align: center;
+	 }
+
+	 .name{
+	 	 background:#fff;
+	     height: auto;
+	     overflow: hidden;
+	     .names{
+	     	padding:4% 2%;
+	        margin:2% 0;
+	     	border-bottom:1px solid #ccc;
+	     	padding-bottom:.5rem;
+	     	i{
+	     		width:5%;
+      	        float:left;
+      	        color:#008077;
+      	        line-height:1.08rem;
+	     	}
+	     	.names-right{
+	     		margin-left:7%;
+	     		h5{
+                   font:.4rem/1.5 "Microsoft YaHei";
+	 	           color:#000;
+	     		}
+	     		p{
+	     			font:.32rem/1.5 "Microsoft YaHei";
+	 	            color:#696969;
+	     		}
+	     	}
+	     }
+	     .check-in{
+	     	text-align: center;
+	     	font:.4rem/1.5 "Microsoft YaHei";
+	     	color:#008077;
+	     	margin-top:.5rem;
+	     	padding-bottom:.5rem;
+	     	text-decoration: none;
+	     	display: block;
+	     	i{
+	     		margin-right:.2rem;
+	     		font-size: .36rem;
+	     	}
+	     }
+	 }
+	 .orders-name-bottom{
+        font:.36rem/2 "Microsoft YaHei";
+	 	color:#393939;
+	 	padding:0 2%;
+	 	i{
+	 		color:#008077;
+	 		margin-right: .2rem;
+	 	}
+	 	a{
+	 		color:#008077;
+	 	}
+	 }
+}
+.orders-submit-bottom{
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:1rem;
+	background-color:#fff;
+	span{
+		display:block;
+        width: 60%;
+        height:1rem;
+        color:#008077;
+        font:.36rem/1rem "Microsoft YaHei";
+        float:left;
+        padding-left:2%;
+	}
+	a{
+		display:block;
+        width: 40%;
+        height:1rem;
+        color:#fff;
+        font:.36rem/1rem "Microsoft YaHei";
+        background-color:#008077;
+        float:right;
+        text-align: center;
+        text-decoration: none;
+	}
+}
+/*
+orders-info
+*/
+.orders-info-top{
+	margin:2% 0;
+	padding:0 2%;
+	background-color:#fff;
+	height:auto;
+	overflow:hidden;
+	.title{
+	  width: 100%;
+	  height:1rem;
+      font:.36rem/1rem "Microsoft YaHei";
+      color:#008077;
+      border-bottom:1px solid #ccc;
+      i{
+      	float: right;
+      	color:#999;
+      }
+	}
+	.info-text{
+		padding:2% 0;
+		height: auto;
+		overflow: hidden;
+		border-bottom:1px solid #ccc;
+		img{
+	      	width:40%;
+	      	float:left;
+	    }
+	    .text-r{
+	      	margin-left: 42%;
+	      	.time{
+	      		font:.36rem/1.5 "Microsoft YaHei";
+	      		color:#008077;
+	        }
+		    p{
+	      		font:.33rem/1.5 "Microsoft YaHei";
+	      		color:#999;
+	      		span{
+	      			color:#008077;
+	      		}
+		    }
+		}
+	}
+	.contact{
+		border-bottom:1px solid #ccc;
+		font:.36rem/1.5 "Microsoft YaHei";
+	    color:#666;
+	    padding:.3rem 0;
+	    a{
+	    	float: right;
+	    	color:#008077;
+	    	border:1px solid #008077;
+	    	text-decoration: none;
+	    	padding:0 .2rem;
+	    }
+	}
+	.map{
+		margin:.2rem 0;
+		width: 100%;
+		height:3rem;
+		overflow: hidden;
+		img{
+      	   width: 100%;
+      	   height:100%;
+        }
+	}
+}
+.orders-info-com{
+	margin:.5rem 0 1rem;
+	h3{
+		font:.36rem/1.5 "Microsoft YaHei";
+      	color:#666;
+      	text-align: center;
+	}
+	.info-name{
+		background-color:#fff;
+		margin:.2rem 0;
+		height: auto;
+		overflow: hidden;
+		padding:.5rem 2%;
+		.left{
+			font:.36rem/1.5 "Microsoft YaHei";
+			float: left;
+			width: 20%;
+			span{
+				float: left;
+			}
+			i{
+				float: left;
+				font-size: .32rem;
+				color:#008077;
+				margin-left: .1rem;
+			}
+		}
+		.con{
+            font:.32rem/1.5 "Microsoft YaHei";
+            float: left;
+            color:#999;
+            text-align: center;
+		}
+		.right{
+			font:.32rem/1.5 "Microsoft YaHei";
+			float: right;
+			color:#999;
+			width: 20%;
+		}
+	}
+}
+.orders-info-bottom{
+	padding:0 2%;
+	a{
+       width: 25.3333%;
+       font:.36rem/1.5 "Microsoft YaHei";
+       display: block;
+       float:left;
+       text-align: center;
+       padding:.2rem 0;
+       border:1px solid #008077;
+       color:#008077;
+       margin:0 4%;
+       text-decoration:none;
+       &:last-child{
+       	  border:1px solid #4c4c4c;
+       	  color:#4c4c4c;
+       }
+	}
+}
+/*
+orders-live
+*/
+.orders-info-top .contact-live{border-bottom:0;}
+.orders-live-icon{
+	margin:2% 0;
+	background-color:#fff;
+	height:auto;
+	overflow:hidden;
+	a{
+		float:left;
+		border:1px solid #ccc;
+		border-top:0;
+		border-left:0;		
+		width: 33.3333%;
+		padding:.5rem 0;
+		text-decoration:none;
+		img{
+			display: block;
+			width:25%;
+			margin:0 auto;
+		}
+		p{
+			font:.36rem/3 "Microsoft YaHei";
+			color:#696969;
+			text-align: center;
+		}
+	}
+}
+.orders-live-com{
+	margin: .2rem 0;
+}
+.orders-live-bottom{
+	padding:.2rem 2%;
+	background-color:#fff;
+	.map{
+		margin:.2rem 0;
+		width: 100%;
+		height:3rem;
+		overflow: hidden;
+		img{
+      	   width: 100%;
+      	   height:100%;
+        }
+	}
+}
+/*
+orders
+*/
+.my-pagination {
+    font-size: 0;
+	span{
+		width: 50%;
+		height:1rem;
+		text-align: center;
+		display:inline-block;
+		border-radius:0;
+		background-color:#fff;
+		font:.4rem/1rem "Microsoft YaHei";
+	}
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+	margin:0;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active{
+	background-color:#fff;
+	color:#008077;
+	border-bottom:1px solid #008077;
+	opacity: 1;
+}
+.swiper-pagination-bullet{
+   color:#000;
+   opacity: 1;
+}
+.order-list{
+	position:relative;
+	margin:2% 0;
+	background-color:#fff;
+	padding:0 2%;
+	h2{
+		color:#454545;
+		font:.4rem/1rem "Microsoft YaHei";
+		border-bottom:1px solid #ccc;
+		a{
+			color:#008077;
+			float:right;
+			text-decoration: none;
+		}
+	}
+	.text-order{
+		padding:2% 0;
+		height:auto;
+		overflow: hidden;
+		img{
+	      	width:36%;
+	      	float:left;
+	      }
+	      .text-r{
+	      	margin-left: 38%;
+	      	p{
+	      		font:.36rem/1.5 "Microsoft YaHei";
+	      		color:#838383;
+	      	}
+	      	a{
+      			color:#008077;
+			    text-decoration: none;
+			    border:1px solid #008077;
+			    font:.32rem/1.5 "Microsoft YaHei";
+			    padding: .05rem 0;
+			    text-align: center;
+			    display: block;
+			    width: 36%;
+			    margin-top:.1rem; 
+			    float: left;
+                margin-right: .2rem;  
+      		}
+    }
+	    i{
+      		position:absolute;
+      		top:50%;
+      		right:5%;
+      		color:#ccc;
+      		@include transform(translate(0,50%));
+      	}
+    }
+}
+.no-order{	
+    margin-top:50%;
+    width: 100%;
+    height:100%;
+    text-align:center;
+    i{
+    	color:#008077;
+    	font-size: 2rem;
+    }
+    h3{
+    	color:#008077;
+    	font:.4rem/1.5 "Microsoft YaHei";
+    }
+    p{
+        font:.36rem/1.5 "Microsoft YaHei";
+        color:#666;	
+    }
+}

@@ -7,7 +7,7 @@
 * Version:0.0.1
 * ================================================================== */
 html {
-  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
   /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -202,13 +202,299 @@ textarea {
 optgroup {
   font-weight: bold; }
 
+.public-footer {
+  text-align: center;
+  margin: .5rem 0; }
+  .public-footer img {
+    width: 20%; }
+  .public-footer p {
+    font-size: .32rem;
+    font-family: "Microsoft YaHei";
+    line-height: 1.2;
+    color: #999; }
+
 .m-hotel {
   padding: 0;
   min-width: 300px;
   max-width: 640px;
   margin: 0 auto; }
 
+.swiper-container {
+  font-size: 0; }
+
 .swiper-slide img {
   width: 100%; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  text-align: right; }
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: .5; }
+
+.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background-color: #008077;
+  opacity: 1;
+  -moz-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -webkit-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5); }
+
+.container {
+  padding: 0 2%; }
+  .container section {
+    margin: 2% 0 4%; }
+
+.login {
+  position: absolute;
+  top: .5rem;
+  left: 5%;
+  z-index: 1;
+  width: 90%; }
+  .login .search {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    width: 50%;
+    height: 1rem;
+    float: left;
+    text-decoration: none; }
+    .login .search i {
+      background: #008077;
+      width: 1rem;
+      height: 1rem;
+      display: block;
+      border-radius: 100%;
+      text-align: center;
+      line-height: 1rem;
+      color: #fff;
+      float: left; }
+    .login .search input {
+      background: none;
+      font-size: .36rem;
+      float: left;
+      outline: none;
+      border: 0;
+      width: 70%;
+      line-height: 1rem;
+      color: #fff;
+      margin-left: .2rem;
+      font-family: "Microsoft YaHei"; }
+  .login .user {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 100%;
+    float: right;
+    width: 1rem;
+    height: 1rem;
+    text-decoration: none; }
+    .login .user i {
+      text-align: center;
+      line-height: 1rem;
+      display: block;
+      color: #fff; }
+
+.city {
+  width: 100%; }
+  .city .left {
+    width: 50%;
+    float: left;
+    padding-right: 1px; }
+  .city .right {
+    width: 50%;
+    float: right;
+    padding-left: 1px; }
+  .city > a {
+    font-size: .32rem;
+    display: block;
+    color: #008077;
+    line-height: 2;
+    text-align: right;
+    text-decoration: none; }
+
+.city-list {
+  display: block;
+  position: relative;
+  font-size: 0;
+  margin-bottom: 2px; }
+  .city-list img {
+    width: 100%; }
+  .city-list h2 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: .5rem;
+    font-family: "Microsoft YaHei";
+    -moz-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-shadow: rgba(0, 0, 0, 0.3) 0 1px 0, rgba(0, 0, 0, 0.3) -1px 0 0; }
+  .city-list p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 2%;
+    width: 100%;
+    height: .7rem;
+    line-height: .7rem;
+    font-size: .32rem;
+    font-family: "Microsoft YaHei";
+    background: rgba(0, 0, 0, 0.8);
+    display: block;
+    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+.go-out {
+  width: 100%; }
+  .go-out h2 {
+    font-size: .4rem;
+    font-weight: bold;
+    color: #008077;
+    line-height: 2;
+    font-family: "Microsoft YaHei"; }
+  .go-out .go-out-list {
+    position: relative;
+    display: block;
+    font-size: 0;
+    text-decoration: none;
+    margin-top: .2rem; }
+    .go-out .go-out-list .text {
+      position: absolute;
+      top: 50%;
+      -moz-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      width: 100%; }
+      .go-out .go-out-list .text h3, .go-out .go-out-list .text p {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: .5rem;
+        color: #fff;
+        line-height: 1.2;
+        text-shadow: rgba(0, 0, 0, 0.3) 0 1px 0, rgba(0, 0, 0, 0.3) -1px 0 0;
+        font-family: "Microsoft YaHei"; }
+      .go-out .go-out-list .text p {
+        font-size: .32rem; }
+    .go-out .go-out-list img {
+      width: 100%; }
+
+.recommend {
+  width: 100%;
+  overflow: hidden; }
+  .recommend h2 {
+    font-size: .4rem;
+    font-weight: bold;
+    color: #008077;
+    line-height: 2;
+    font-family: "Microsoft YaHei"; }
+  .recommend .swiper-recommend {
+    margin: 2% -5%; }
+  .recommend #swiper-container1 {
+    overflow: inherit;
+    width: 80%; }
+  .recommend .img {
+    width: 100%;
+    position: relative; }
+    .recommend .img i {
+      position: absolute;
+      top: .5rem;
+      right: .5rem;
+      background: #fff;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 100%;
+      text-align: center;
+      line-height: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px; }
+    .recommend .img h3 {
+      position: absolute;
+      top: 60%;
+      left: 0;
+      background: rgba(0, 128, 119, 0.8);
+      padding: .2rem .3rem;
+      font-size: .6rem;
+      color: #fff;
+      border-radius: 0 30px 30px 0;
+      font-family: "Microsoft YaHei"; }
+      .recommend .img h3 span {
+        font-size: .4rem; }
+    .recommend .img p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      line-height: 2;
+      background: rgba(0, 0, 0, 0.6);
+      font-size: .36rem;
+      font-family: "Microsoft YaHei";
+      color: #fff;
+      padding: 0 2%; }
+      .recommend .img p span {
+        background: #fff;
+        border-radius: 3px;
+        color: #333;
+        font-size: .34rem;
+        padding: 0 .1rem;
+        margin-right: .2rem; }
+  .recommend .text {
+    padding: 0 1%;
+    margin: 3% 0; }
+    .recommend .text .text-top {
+      width: 100%;
+      height: .6rem;
+      overflow: hidden; }
+      .recommend .text .text-top h3 {
+        float: left;
+        font-size: .5rem;
+        color: #333;
+        line-height: .5rem;
+        font-family: "Microsoft YaHei"; }
+      .recommend .text .text-top p {
+        float: right;
+        font-size: .36rem;
+        color: #666;
+        line-height: .5rem;
+        font-family: "Microsoft YaHei"; }
+    .recommend .text .text-com {
+      font-size: .32rem;
+      line-height: 1.8;
+      color: #666;
+      font-family: "Microsoft YaHei"; }
+      .recommend .text .text-com span {
+        border: 1px solid #008077;
+        border-radius: 3px;
+        margin-right: .1rem;
+        padding: 2px 5px; }
+        .recommend .text .text-com span:nth-child(2n) {
+          border: 1px solid #ff9500; }
+    .recommend .text .text-bottom {
+      font-family: "Microsoft YaHei";
+      font-size: .36rem;
+      line-height: 1.8;
+      color: #666; }
+
+.join {
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+  .join .left {
+    width: 49%;
+    float: left;
+    margin-right: 1%; }
+  .join .right {
+    width: 49%;
+    float: right;
+    margin-left: 1%; }
+  .join a > img {
+    width: 100%;
+    border-radius: 5px; }
 
 /*# sourceMappingURL=index.css.map */

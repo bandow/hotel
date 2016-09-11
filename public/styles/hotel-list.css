@@ -1,0 +1,352 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2016-09-09
+* Version:0.0.1
+* ================================================================== */
+html {
+  font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, body {
+  /*-webkit-user-select:none禁止用户进行复制.选择.*/
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  /*使用min-height:100%代替height：100%*/
+  min-height: 100%; }
+
+body {
+  /*全局滚动 建议：将属性挂在body上，可以避免很多奇怪的bug。*/
+  -webkit-overflow-scrolling: touch; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background: transparent; }
+
+a:active, a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+.public-header {
+  padding: 0 3%;
+  height: 1rem;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden; }
+  .public-header h1 {
+    margin: 0;
+    width: 100%;
+    margin: 0 -1rem;
+    text-align: center;
+    color: #008077;
+    float: left;
+    font: bold .5rem/1rem "Microsoft YaHei"; }
+  .public-header .left {
+    float: left;
+    width: 1rem;
+    height: 1rem;
+    text-decoration: none; }
+    .public-header .left i {
+      color: #000;
+      font-size: .7rem;
+      line-height: 1rem;
+      display: block; }
+  .public-header .right {
+    float: right;
+    margin: .1rem;
+    width: .8rem;
+    height: .8rem;
+    text-decoration: none;
+    background: #4f4f4f;
+    border-radius: 100%; }
+    .public-header .right i {
+      color: #fff;
+      line-height: .8rem;
+      text-align: center;
+      display: block; }
+
+.m-hotel {
+  padding: 0;
+  min-width: 300px;
+  max-width: 640px;
+  margin: 0 auto; }
+
+.container {
+  padding: 0 2%; }
+  .container section {
+    margin: 2% 0 4%;
+    border-bottom: 1px solid #ccc; }
+
+.hotel-list .img {
+  width: 100%;
+  position: relative;
+  font-size: 0; }
+  .hotel-list .img img {
+    width: 100%; }
+  .hotel-list .img i {
+    position: absolute;
+    top: .25rem;
+    right: .25rem;
+    background: #fff;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px; }
+  .hotel-list .img h3 {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    background: rgba(0, 128, 119, 0.8);
+    padding: .2rem .3rem;
+    font-size: .6rem;
+    color: #fff;
+    border-radius: 0 30px 30px 0;
+    font-family: "Microsoft YaHei";
+    margin-left: -5%;
+    padding-left: 5%; }
+    .hotel-list .img h3 span {
+      font-size: .4rem; }
+  .hotel-list .img p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 2;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: .36rem;
+    font-family: "Microsoft YaHei";
+    color: #fff;
+    padding: 0 2%; }
+    .hotel-list .img p span {
+      background: #fff;
+      border-radius: 3px;
+      color: #333;
+      font-size: .34rem;
+      padding: 0 .1rem;
+      margin-right: .2rem; }
+.hotel-list .text {
+  padding: 0 1%;
+  margin: 3% 0; }
+  .hotel-list .text .text-top {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: .2rem; }
+    .hotel-list .text .text-top h3 {
+      float: left;
+      font-size: .5rem;
+      color: #333;
+      line-height: .5rem;
+      font-family: "Microsoft YaHei";
+      width: 60%; }
+    .hotel-list .text .text-top p {
+      float: right;
+      font-size: .36rem;
+      color: #666;
+      line-height: .5rem;
+      font-family: "Microsoft YaHei"; }
+  .hotel-list .text .text-com {
+    font-size: .32rem;
+    line-height: 2.4;
+    color: #666;
+    font-family: "Microsoft YaHei"; }
+    .hotel-list .text .text-com span {
+      border: 1px solid #008077;
+      border-radius: 3px;
+      margin-right: .1rem;
+      padding: 2px 5px; }
+      .hotel-list .text .text-com span:nth-child(2n) {
+        border: 1px solid #ff9500; }
+  .hotel-list .text .text-bottom {
+    font-family: "Microsoft YaHei";
+    font-size: .36rem;
+    line-height: 1.8;
+    color: #666; }
+
+.hotel-list-order .img i {
+  background: #faae2d;
+  color: #fff; }
+.hotel-list-order .order {
+  position: absolute;
+  right: .5rem;
+  bottom: .5rem;
+  width: 18%;
+  z-index: 1; }
+
+/*# sourceMappingURL=hotel-list.css.map */

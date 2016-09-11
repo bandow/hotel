@@ -1,0 +1,133 @@
+@import "reset","variable","header";
+.m-hotel{
+	padding: 0;
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+.container{
+	padding:0 2%;
+	section{
+	   margin:2% 0 4%;
+	   border-bottom: 1px solid #ccc;
+	}
+}
+.hotel-list{
+	.img{
+		width:100%;
+		position:relative;
+		font-size:0;
+		img{
+			width: 100%;
+		}
+		i{
+			position: absolute;
+		    top: .25rem;
+		    right: .25rem;
+			background: #fff;
+		    width: 1rem;
+		    height: 1rem;
+		    border-radius: 100%;
+		    text-align: center;
+		    line-height: 1rem;
+		    box-shadow:rgba(0, 0, 0, 0.3) 0 1px 2px;
+		}
+		h3{
+			position:absolute;
+			top:60%;
+			left:0;
+			background:rgba(0,128,119,.8);
+			padding:.2rem .3rem;
+			font-size:.6rem;
+			color:#fff;
+			border-radius: 0 30px 30px 0;
+			font-family: "Microsoft YaHei";
+			margin-left: -5%;
+            padding-left: 5%;
+			span{
+				font-size:.4rem;
+			}
+		}
+		p{
+			position:absolute;
+			bottom:0;
+			left:0;
+			width:100%;
+			line-height:2;
+			background:rgba(0,0,0,.6);
+			font-size:.36rem;
+			font-family: "Microsoft YaHei";
+			color:#fff;
+			padding:0 2%;
+			span{
+				background:#fff;
+				border-radius:3px;
+				color:#333;
+				font-size:.34rem;
+				padding:0 .1rem;
+				margin-right:.2rem;
+			}
+		}
+	}
+	.text{
+		padding:0 1%;
+		margin:3% 0;
+		.text-top{
+			width:100%;
+			height:auto;
+			overflow:hidden;
+			margin-bottom: .2rem;
+            h3{
+           	   float:left;
+           	   font-size:.5rem;
+           	   color:#333;
+           	   line-height:.5rem;
+           	   font-family: "Microsoft YaHei";
+           	   width:60%;
+           	}
+           	p{
+           		float:right;
+           		font-size:.36rem;
+           	    color:#666;
+           	    line-height:.5rem;
+           	    font-family: "Microsoft YaHei";
+           	}
+		}
+		.text-com{
+			font-size:.32rem;
+			line-height:2.4;
+			color:#666;
+			font-family: "Microsoft YaHei";
+			span{
+				border:1px solid #008077;
+				border-radius:3px;
+				margin-right:.1rem;
+				padding:2px 5px;
+				&:nth-child(2n){
+					border:1px solid #ff9500;
+				}
+			}
+		}
+		.text-bottom{
+			font-family: "Microsoft YaHei";
+            font-size:.36rem;
+            line-height:1.8;
+            color:#666;
+		}
+	}
+}
+.hotel-list-order{
+	.img{
+		i{
+			background: #faae2d;
+			color:#fff;
+		}
+	}
+	.order{
+		position:absolute;
+		right: .5rem;
+	    bottom: .5rem;
+	    width: 18%;
+	    z-index: 1;
+	}
+}

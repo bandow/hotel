@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="不超过150个字符"/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title></title>
+<link rel="stylesheet" href="../public/styles/orders.css">
+<link rel="stylesheet" href="../public/styles/iconfont.css">
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ia21oG6eioiE5yKW2ERRB2P6lOcpAyGh"></script>
+</head>
+<body class="m-hotel-live">
+<!-- begin header -->
+<header class="public-header">
+    <a href="#" class="left">
+    	<i class="iconfont icon-fanhui"></i>
+    </a>
+	<h1 class="color-h1">在住单号：104530</h1>
+	<a href="#" class="right1">
+		<i class="iconfont icon-shouye"></i>
+	</a>
+</header>
+<!-- begin container -->
+<div class="container">
+    <section class="orders-info-top">
+    	<h2 class="title">琶洲广交会We+共享空间<i class="iconfont icon-dayuhao"></i></h2>
+    	<div class="info-text">
+    		<img src="../public/images/orders/orders01.jpg" alt="">
+		  	<div class="text-r">
+		  		<p class="time">9月1日-9月3日 共2晚</p>
+		  		<p>预订人：<span>叶伟</span></p>
+		        <p>预订电话：<span>18685485552</span></p>
+		        <p>金额：<span>￥1982</span></p>
+	  	  	</div>
+    	</div>
+        <p class="contact contact-live">客服：小木木<a href="">联系小木木</a></p>       
+    </section>
+    <section class="orders-live-icon">
+        <a href="#">
+        	<img src="../public/images/orders/live01.png" alt="">
+        	<p>远程开门</p>
+        </a>
+        <a href="#">
+        	<img src="../public/images/orders/live01.png" alt="">
+        	<p>重发密码</p>
+        </a>
+        <a href="#">
+        	<img src="../public/images/orders/live01.png" alt="">
+        	<p>房间打扫</p>
+        </a>
+        <a href="#">
+        	<img src="../public/images/orders/live01.png" alt="">
+        	<p>我要续住</p>
+        </a>
+        <a href="#">
+        	<img src="../public/images/orders/live01.png" alt="">
+        	<p>办理发票</p>
+        </a>
+        <a href="#">
+        	<img src="../public/images/orders/live01.png" alt="">
+        	<p>办理退房</p>
+        </a>
+    </section>
+    <section class="orders-info-com orders-live-com">
+        <h3>入住人信息</h3>
+        <div class="info-name">
+        	<div class="left"><span>叶伟</span><i class="iconfont icon-gerenzhongxin"></i></div>
+        	<div class="con">身份证号：440324198607097516</div>
+        	<div class="right">未办理入住</div>
+        </div>	
+    </section>
+    <section class="orders-live-bottom">
+        <div class="map" id="map"></div>
+    </section>
+</div>
+<!-- begin script -->
+<script src="../public/scripts/require.js" data-main="../public/scripts/orders"></script>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("map");
+	var point = new BMap.Point(113.345651,23.140021);
+	//创建自己logo
+	var pt = new BMap.Point(113.345651,23.140021);
+	var myIcon = new BMap.Icon("../public/images/detailed/logo.png", new BMap.Size(60,60));
+	var marker2 = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
+	map.addOverlay(marker2);              // 将标注添加到地图
+	map.centerAndZoom(new BMap.Point(113.345382,23.14145), 16);        //设置中心点
+    var opts = {
+	  position : point,    // 指定文本标注所在的地理位置
+	  offset   : new BMap.Size(-160, -60)    //设置文本偏移量
+	}
+	var label = new BMap.Label("广州市天河区天河北路278号岗顶大厦（地铁岗顶C出口）", opts);  // 创建文本标注对象
+		label.setStyle({
+			 color : "#333",
+			 fontSize : "12px",
+			 height : "30px",
+			 lineHeight : "30px",
+			 fontFamily:"微软雅黑",
+			 border:"none"
+		 });
+	map.addOverlay(label);  
+</script>
+</body>
+</html>
