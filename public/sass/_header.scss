@@ -1,17 +1,17 @@
 .public-header{
 	padding:0 3%;
-	height:1rem;
+	height:1.2rem;
 	border-bottom:1px solid #ccc;
 	overflow:hidden;
 	background:#fff;
 	h1{
 		margin:0;
 		width:100%;
-		margin:0 -1rem;
+		margin:0 -1.28rem;
 		text-align: center;
 		color:#008077;
 		float: left;
-		font:bold .5rem/1rem "Microsoft YaHei";
+		font:bold .5rem/1.2rem "Microsoft YaHei";
 	}
 	.color-h1{
 		color:#4f4f4f;
@@ -19,23 +19,23 @@
 	}
 	.left{
 		float: left;
-        width:1rem;
-        height: 1rem;
+        width:1.2rem;
+        height: 1.2rem;
         text-decoration:none;
         position: relative;
         z-index: 1;
         i{
         	color: #000;
 		    font-size: .7rem;
-		    line-height: 1rem;
+		    line-height: 1.2rem;
 		    display: block;
         }
 	}
 	.right{
 		float:right;
 		margin:.1rem;
-		width:.8rem;
-		height: .8rem;
+		width:1rem;
+		height: 1rem;
 		text-decoration:none;
 		background:#4f4f4f;
 		border-radius:100%;
@@ -43,21 +43,21 @@
         z-index: 1;
 		i{
 			color:#fff;
-			line-height: .8rem;
+			line-height: 1rem;
 			text-align: center;
 			display: block;
 		}
 	}
 	.right1{
 		float:right;
-		width:1rem;
-		height: 1rem;
+		width:1.2rem;
+		height: 1.2rem;
 		text-decoration:none;
 		position: relative;
         z-index: 1;
 		i{
 			color:#fff;
-			line-height: 1rem;
+			line-height: 1.2rem;
 			text-align: center;
 			display: block;
 			color:#4f4f4f;

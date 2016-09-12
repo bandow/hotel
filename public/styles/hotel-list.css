@@ -204,40 +204,62 @@ optgroup {
 
 .public-header {
   padding: 0 3%;
-  height: 1rem;
+  height: 1.2rem;
   border-bottom: 1px solid #ccc;
-  overflow: hidden; }
+  overflow: hidden;
+  background: #fff; }
   .public-header h1 {
     margin: 0;
     width: 100%;
-    margin: 0 -1rem;
+    margin: 0 -1.28rem;
     text-align: center;
     color: #008077;
     float: left;
-    font: bold .5rem/1rem "Microsoft YaHei"; }
+    font: bold .5rem/1.2rem "Microsoft YaHei"; }
+  .public-header .color-h1 {
+    color: #4f4f4f;
+    font-weight: normal; }
   .public-header .left {
     float: left;
-    width: 1rem;
-    height: 1rem;
-    text-decoration: none; }
+    width: 1.2rem;
+    height: 1.2rem;
+    text-decoration: none;
+    position: relative;
+    z-index: 1; }
     .public-header .left i {
       color: #000;
       font-size: .7rem;
-      line-height: 1rem;
+      line-height: 1.2rem;
       display: block; }
   .public-header .right {
     float: right;
     margin: .1rem;
-    width: .8rem;
-    height: .8rem;
+    width: 1rem;
+    height: 1rem;
     text-decoration: none;
     background: #4f4f4f;
-    border-radius: 100%; }
+    border-radius: 100%;
+    position: relative;
+    z-index: 1; }
     .public-header .right i {
       color: #fff;
-      line-height: .8rem;
+      line-height: 1rem;
       text-align: center;
       display: block; }
+  .public-header .right1 {
+    float: right;
+    width: 1.2rem;
+    height: 1.2rem;
+    text-decoration: none;
+    position: relative;
+    z-index: 1; }
+    .public-header .right1 i {
+      color: #fff;
+      line-height: 1.2rem;
+      text-align: center;
+      display: block;
+      color: #4f4f4f;
+      font-size: .6rem; }
 
 .m-hotel {
   padding: 0;
@@ -251,93 +273,98 @@ optgroup {
     margin: 2% 0 4%;
     border-bottom: 1px solid #ccc; }
 
-.hotel-list .img {
-  width: 100%;
-  position: relative;
-  font-size: 0; }
-  .hotel-list .img img {
-    width: 100%; }
-  .hotel-list .img i {
-    position: absolute;
-    top: .25rem;
-    right: .25rem;
-    background: #fff;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px; }
-  .hotel-list .img h3 {
-    position: absolute;
-    top: 60%;
-    left: 0;
-    background: rgba(0, 128, 119, 0.8);
-    padding: .2rem .3rem;
-    font-size: .6rem;
-    color: #fff;
-    border-radius: 0 30px 30px 0;
-    font-family: "Microsoft YaHei";
-    margin-left: -5%;
-    padding-left: 5%; }
-    .hotel-list .img h3 span {
-      font-size: .4rem; }
-  .hotel-list .img p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.lists {
+  margin: 2% 0; }
+
+.hotel-list {
+  text-decoration: none; }
+  .hotel-list .img {
     width: 100%;
-    line-height: 2;
-    background: rgba(0, 0, 0, 0.6);
-    font-size: .36rem;
-    font-family: "Microsoft YaHei";
-    color: #fff;
-    padding: 0 2%; }
-    .hotel-list .img p span {
+    position: relative;
+    font-size: 0; }
+    .hotel-list .img img {
+      width: 100%; }
+    .hotel-list .img i {
+      position: absolute;
+      top: .25rem;
+      right: .25rem;
       background: #fff;
-      border-radius: 3px;
-      color: #333;
-      font-size: .34rem;
-      padding: 0 .1rem;
-      margin-right: .2rem; }
-.hotel-list .text {
-  padding: 0 1%;
-  margin: 3% 0; }
-  .hotel-list .text .text-top {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    margin-bottom: .2rem; }
-    .hotel-list .text .text-top h3 {
-      float: left;
-      font-size: .5rem;
-      color: #333;
-      line-height: .5rem;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 100%;
+      text-align: center;
+      line-height: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px; }
+    .hotel-list .img h3 {
+      position: absolute;
+      top: 60%;
+      left: 0;
+      background: rgba(0, 128, 119, 0.8);
+      padding: .2rem .3rem;
+      font-size: .6rem;
+      color: #fff;
+      border-radius: 0 30px 30px 0;
       font-family: "Microsoft YaHei";
-      width: 60%; }
-    .hotel-list .text .text-top p {
-      float: right;
+      margin-left: -5%;
+      padding-left: 5%; }
+      .hotel-list .img h3 span {
+        font-size: .4rem; }
+    .hotel-list .img p {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      line-height: 2;
+      background: rgba(0, 0, 0, 0.6);
       font-size: .36rem;
+      font-family: "Microsoft YaHei";
+      color: #fff;
+      padding: 0 2%; }
+      .hotel-list .img p span {
+        background: #fff;
+        border-radius: 3px;
+        color: #333;
+        font-size: .34rem;
+        padding: 0 .1rem;
+        margin-right: .2rem; }
+  .hotel-list .text {
+    padding: 0 1%;
+    margin: 3% 0; }
+    .hotel-list .text .text-top {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      margin-bottom: .2rem; }
+      .hotel-list .text .text-top h3 {
+        float: left;
+        font-size: .5rem;
+        color: #333;
+        line-height: .5rem;
+        font-family: "Microsoft YaHei";
+        width: 60%; }
+      .hotel-list .text .text-top p {
+        float: right;
+        font-size: .36rem;
+        color: #666;
+        line-height: .5rem;
+        font-family: "Microsoft YaHei"; }
+    .hotel-list .text .text-com {
+      font-size: .32rem;
+      line-height: 2.4;
       color: #666;
-      line-height: .5rem;
       font-family: "Microsoft YaHei"; }
-  .hotel-list .text .text-com {
-    font-size: .32rem;
-    line-height: 2.4;
-    color: #666;
-    font-family: "Microsoft YaHei"; }
-    .hotel-list .text .text-com span {
-      border: 1px solid #008077;
-      border-radius: 3px;
-      margin-right: .1rem;
-      padding: 2px 5px; }
-      .hotel-list .text .text-com span:nth-child(2n) {
-        border: 1px solid #ff9500; }
-  .hotel-list .text .text-bottom {
-    font-family: "Microsoft YaHei";
-    font-size: .36rem;
-    line-height: 1.8;
-    color: #666; }
+      .hotel-list .text .text-com span {
+        border: 1px solid #008077;
+        border-radius: 3px;
+        margin-right: .1rem;
+        padding: 2px 5px; }
+        .hotel-list .text .text-com span:nth-child(2n) {
+          border: 1px solid #ff9500; }
+    .hotel-list .text .text-bottom {
+      font-family: "Microsoft YaHei";
+      font-size: .36rem;
+      line-height: 1.8;
+      color: #666; }
 
 .hotel-list-order .img i {
   background: #faae2d;
