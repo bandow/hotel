@@ -7,6 +7,13 @@
     background: #f4f4f4;
     padding-bottom:1.2rem;
 }
+.m-hotel-profit{
+	padding: 0;
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    background: #f4f4f4;
+}
 .user-header{
 	 position:relative;
 	 width: 100%;
@@ -261,87 +268,65 @@ user-profit
 .profit-surface{
 	margin-top:2%;
 	background-color:#fff;
-}
-.swiper-container{
-}
-.my-pagination {
-    font-size: 0;
-	span{
-		width:10%;
-		height:1rem;
-		text-align: center;
-		display:inline-block;
-		border-radius:0;
-		background-color:#fff;
-		font:.4rem/1rem "Microsoft YaHei";
-	}
-}
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
-	width:220%;
-	margin-left:-60%;
-}
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
-	margin:0;
-	float:left;
-	border-bottom: 1px solid #ccc;
-}
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active{
-	background-color:#fff;
-	color:#008077;
-	border-bottom:1px solid #008077;
-	opacity: 1;
-}
-.swiper-pagination-bullet{
-   color:#000;
-   opacity: 1;
-}
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
-	opacity:1;
-}
-.swiper-button-prev{
-	width: .5rem;
-    height: .95rem;
-    background: none;
-    background-color: #fff;
-    margin: 0;
-    top: 0;
-    left: 0;
-	&:before{
-		content:"";
+	width: 100%;
+    overflow: hidden;
+    .l{
+    	content:"";
 		position: absolute;
 		width: 0;
 		height:0;
 		border-top: .2rem solid transparent;
 	    border-bottom: .2rem  solid transparent;
 	    border-right: .2rem  solid #cacaca;
-	    left: 50%;
+	    left:.1%;
 	    top: 50%;
 	    z-index: 1;
-	    @include transform(translate(0,-40%));
-	    background:none;
-	}
-	
-}
-.swiper-button-next{
-	width: .5rem;
-    height: .95rem;
-    background: none;
-    background-color: #fff;
-    margin: 0;
-    top: 0;
-    right: 0;
-	&:before{
-		content:"";
+	    @include transform(translate(0,-50%));
+    }
+    .r{
+    	content:"";
 		position: absolute;
 		width: 0;
 		height:0;
 		border-top: .2rem solid transparent;
 	    border-bottom: .2rem  solid transparent;
 	    border-left: .2rem  solid #cacaca;
-	    right: 50%;
+	    right:.1%;
 	    top: 50%;
 	    z-index: 1;
-	    @include transform(translate(0,-40%));
-	    background:none;
-	}	
+	    @include transform(translate(0,-50%));
+    }
+	ul{
+		width:240vw;
+		margin-left:-60vw;
+		height: 1.2rem;
+		overflow: hidden;
+        border-bottom:1px solid #ccc;
+        transition:all .5s;
+        -webkit-transition:all .5s;
+        li{
+			font:.36rem/1.2rem "Microsoft YaHei";
+			float: left;
+			text-align: center;
+			width:20vw;
+			color:#4e4e4e;
+		}
+		.active{
+			color:#000;
+			position:relative;
+			&:before{
+               content:"";
+               width:20vw;
+               height: 2px;
+               background-color:#008077;
+               position:absolute;
+               left:0;
+               bottom:0;
+			}
+		}
+	}
+	.profit-surface{
+		display: none;
+	}
+	
 }

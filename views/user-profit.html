@@ -13,10 +13,9 @@
 <meta name="msapplication-tap-highlight" content="no">
 <title></title>
 <link rel="stylesheet" href="../public/styles/iconfont.css">
-<link rel="stylesheet" href="../public/styles/lib/swiper-3.3.1.min.css">
 <link rel="stylesheet" href="../public/styles/user.css">
 </head>
-<body class="m-hotel">
+<body class="m-hotel-profit">
 <!-- begin container -->
 <div class="container">
    <header class="user-header profit-header">
@@ -56,42 +55,42 @@
    	   </dl>
    </div>
    <div class="profit-surface">
-        <div class="swiper-container" id="swiper-container5">
-        	<!-- 如果需要导航按钮 -->
-		    <div class="swiper-button-prev"></div>
-		    <div class="swiper-button-next"></div>
-		    <div class="my-pagination"></div>
-		    <div class="swiper-wrapper">
-		        <div class="swiper-slide">1
-		        </div>
-		        <div class="swiper-slide">2
-		        </div>
-		        <div class="swiper-slide">3
-		        </div>
-		        <div class="swiper-slide">4
-		        </div>
-		        <div class="swiper-slide">5
-		        </div>
-		        <div class="swiper-slide">6
-		        </div>
-		        <div class="swiper-slide">7
-		        </div>
-		        <div class="swiper-slide">8
-		        </div>
-		        <div class="swiper-slide">9
-		        </div>
-		        <div class="swiper-slide">10
-		        </div>
-		        <div class="swiper-slide">11
-		        </div>
-		        <div class="swiper-slide">12
-		        </div>
-		    </div>
-
-		</div>
+        <ul>
+        	<li>2016.01</li>
+        	<li>2016.02</li>
+        	<li>2016.03</li>
+        	<li>2016.04</li>
+        	<li>2016.05</li>
+        	<li class="active">2016.06</li>
+        	<li>2016.07</li>
+        	<li>2016.08</li>
+        	<li>2016.09</li>
+        	<li>2016.10</li>
+        	<li>2016.11</li>
+        	<li>2016.12</li>
+        </ul>
+        <div class="l"></div>
+        <div class="r"></div>
+        <div class="profit-surface-all">
+        	<div class="profit-surface" id="profit-surface1" data-index="1">1</div>
+	        <div class="profit-surface" data-index="2">2</div>
+	        <div class="profit-surface" data-index="3">3</div>
+	        <div class="profit-surface" data-index="4">4</div>
+	        <div class="profit-surface" data-index="5">5</div>
+	        <div style="display:block;min-width:300px;height:300px" class="profit-surface" id="profit-surface6" data-index="6"></div>
+	        <div class="profit-surface" data-index="7">7</div>
+	        <div class="profit-surface" data-index="8">8</div>
+	        <div class="profit-surface" data-index="9">9</div>
+	        <div class="profit-surface" data-index="10">10</div>
+	        <div class="profit-surface" data-index="11">11</div>
+	        <div class="profit-surface" data-index="12">12</div>
+        </div>      
    </div>
 </div>
 <!-- begin script -->
-<script src="../public/scripts/require.js" data-main="../public/scripts/user"></script>
+<!-- <script src="../public/scripts/require.js" data-main="../public/scripts/user"></script> -->
+<script src="../public/scripts/lib/jquery-2.1.4.min.js"></script>
+<script src="../public/scripts/lib/highcharts.js"></script>
+<script src="../public/scripts/profit.js"></script>
 </body>
 </html>
