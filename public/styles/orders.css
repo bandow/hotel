@@ -644,4 +644,175 @@ orders
     font: .36rem/1.5 "Microsoft YaHei";
     color: #666; }
 
+/*
+orders-report
+*/
+.profit-list {
+  position: relative;
+  margin: 5% 0;
+  background-color: #fff;
+  height: 1.6rem; }
+  .profit-list:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: .3rem solid transparent;
+    border-right: .3rem  solid transparent;
+    border-top: .3rem  solid #fff;
+    left: 50%;
+    top: 100%;
+    z-index: 1;
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0); }
+  .profit-list .radio-text {
+    height: 1rem;
+    border: 1px solid #ccc;
+    position: relative;
+    color: #4e4e4e;
+    font: .4rem/1.1rem "Microsoft YaHei";
+    margin: 0 2%;
+    padding: 0 2%; }
+    .profit-list .radio-text:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: .2rem solid transparent;
+      border-right: .2rem solid transparent;
+      border-top: .2rem solid #cacaca;
+      right: 4%;
+      top: 50%;
+      z-index: 1;
+      -moz-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%); }
+    .profit-list .radio-text span {
+      width: .48rem;
+      height: .5rem;
+      float: left;
+      margin: .245rem .1rem 0 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      position: relative; }
+      .profit-list .radio-text span:before {
+        content: "";
+        position: absolute;
+        top: -5%;
+        left: 5%;
+        width: .2rem;
+        height: .1rem;
+        background-color: #666;
+        transform: rotate(50deg) translate(100%, 150%); }
+      .profit-list .radio-text span:after {
+        content: "";
+        position: absolute;
+        top: -5%;
+        left: 5%;
+        width: .35rem;
+        height: .1rem;
+        background-color: #666;
+        transform: rotate(-45deg) translate(-30%, 170%); }
+  .profit-list dl {
+    padding: 0 2%;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+    max-height: 7rem;
+    overflow: auto;
+    display: none; }
+    .profit-list dl dd {
+      color: #4e4e4e;
+      font: .4rem/1.1rem "Microsoft YaHei";
+      padding: 0 2%; }
+      .profit-list dl dd span {
+        width: .48rem;
+        height: .5rem;
+        float: left;
+        margin: .24rem .1rem 0 0;
+        border: 1px solid #ccc;
+        border-radius: 3px; }
+    .profit-list dl .active span {
+      position: relative; }
+      .profit-list dl .active span:before {
+        content: "";
+        position: absolute;
+        top: -5%;
+        left: 5%;
+        width: .2rem;
+        height: .1rem;
+        background-color: #666;
+        transform: rotate(50deg) translate(100%, 150%); }
+      .profit-list dl .active span:after {
+        content: "";
+        position: absolute;
+        top: -5%;
+        left: 5%;
+        width: .35rem;
+        height: .1rem;
+        background-color: #666;
+        transform: rotate(-45deg) translate(-30%, 170%); }
+
+.profit-surface {
+  margin-top: 2%;
+  background-color: #fff;
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+  .profit-surface .l {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: .2rem solid transparent;
+    border-bottom: .2rem  solid transparent;
+    border-right: .2rem  solid #cacaca;
+    left: .1%;
+    top: .4rem;
+    z-index: 1; }
+  .profit-surface .r {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: .2rem solid transparent;
+    border-bottom: .2rem  solid transparent;
+    border-left: .2rem  solid #cacaca;
+    right: .1%;
+    top: .4rem;
+    z-index: 1; }
+  .profit-surface ul {
+    width: 240vw;
+    margin-left: -60vw;
+    height: 1.2rem;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    transition: all .5s;
+    -webkit-transition: all .5s; }
+    .profit-surface ul li {
+      font: .36rem/1.2rem "Microsoft YaHei";
+      float: left;
+      text-align: center;
+      width: 20vw;
+      color: #4e4e4e; }
+    .profit-surface ul .active {
+      color: #000;
+      position: relative; }
+      .profit-surface ul .active:before {
+        content: "";
+        width: 20vw;
+        height: 2px;
+        background-color: #008077;
+        position: absolute;
+        left: 0;
+        bottom: 0; }
+  .profit-surface .profit-surface {
+    display: none; }
+
 /*# sourceMappingURL=orders.css.map */

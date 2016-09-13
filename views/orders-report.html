@@ -12,46 +12,30 @@
 <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
 <meta name="msapplication-tap-highlight" content="no">
 <title>MERCIbnb木西民宿</title>
+<link rel="stylesheet" href="../public/styles/orders.css">
 <link rel="stylesheet" href="../public/styles/iconfont.css">
-<link rel="stylesheet" href="../public/styles/user.css">
 </head>
-<body class="m-hotel-profit">
+<body class="m-hotel">
+<!-- begin header -->
+<header class="public-header">
+    <a href="#" class="left">
+    	<i class="iconfont icon-fanhui"></i>
+    </a>
+	<h1 class="color-h1">预订报表</h1>
+	<a href="#" class="right1">
+		<i class="iconfont icon-shouye"></i>
+	</a>
+</header>
 <!-- begin container -->
 <div class="container">
-   <header class="user-header profit-header">
-       <div class="top">
-	       <a href="#" class="left"><i class="iconfont icon-fanhui"></i></a>
-	   	   <h1 class="color-h1">我的收益</h1>
-       </div>
-   	   <div class="profit-money">
-           <h2>¥26886.85</h2>  
-   	   	   <p>本月收益</p>
-   	   </div>
-   	   <div class="profit-money-list">
-	   	   	<ul>
-	   	   	 	<li>
-	   	   	 		<p>本月营业额</p>
-	                <p>￥125586.55</p>
-	   	   	 	</li>
-	   	   	 	<li>
-	   	   	 		<p>运营成本</p>
-	                <p>￥1534.5</p>
-	   	   	 	</li>
-	   	   	 	<li>
-	   	   	 		<p>房晚</p>
-	                <p>25</p>
-	   	   	 	</li>
-	   	   	</ul>
-   	   </div>
-   </header>
    <div class="profit-list">
+       <div class="radio-text" id="radioTxte"><span></span>汉溪长隆珑翠完美假期轻奢三居房1</div>
    	   <dl>
-   	   	<dt><input name="checkname" type="checkbox">汉溪长隆珑翠完美假期轻奢三居房</dt>
-   	   	<dd><input name="checkname" type="checkbox">广交会首选·最美广州·纵览小蛮腰豪华五房</dd>
-   	   	<dd><input name="checkname" type="checkbox">汉溪长隆珑翠完美假期轻奢三居房</dd>
-   	   	<dd><input name="checkname" type="checkbox">广交会首选·最美广州·纵览小蛮腰豪华五房</dd>
-   	   	<dd><input name="checkname" type="checkbox">汉溪长隆珑翠完美假期轻奢三居房</dd>
-   	   	<dd><input class="check-all" type="checkbox"><span class="check-confirm">全选</span><a class="confirm" href="javascript:;">确定</a></dd>
+   	   	<dd class="active"><span></span>汉溪长隆珑翠完美假期轻奢三居房1</dd>
+   	   	<dd><span></span>广交会首选·最美广州·纵览小蛮腰豪华五房2</dd>
+   	   	<dd><span></span>汉溪长隆珑翠完美假期轻奢三居房3</dd>
+   	   	<dd><span></span>广交会首选·最美广州·纵览小蛮腰豪华五房4</dd>
+   	   	<dd><span></span>汉溪长隆珑翠完美假期轻奢三居房5</dd>
    	   </dl>
    </div>
    <div class="profit-surface">
@@ -69,7 +53,7 @@
         	<li>2016.11</li>
         	<li>2016.12</li>
         </ul>
-   <!--      <div class="l"></div>
+    <!--     <div class="l"></div>
         <div class="r"></div> -->
         <div class="profit-surface-all">
         	<div class="profit-surface" id="profit-surface1" data-index="1">1</div>
@@ -77,7 +61,7 @@
 	        <div class="profit-surface" data-index="3">3</div>
 	        <div class="profit-surface" data-index="4">4</div>
 	        <div class="profit-surface" data-index="5">5</div>
-	        <div style="display:block; height:300px;" class="profit-surface" id="profit-surface6" data-index="6"></div>
+	        <div style="display:block;" class="profit-surface" id="book-calendar" data-index="6">6</div>
 	        <div class="profit-surface" data-index="7">7</div>
 	        <div class="profit-surface" data-index="8">8</div>
 	        <div class="profit-surface" data-index="9">9</div>
@@ -88,9 +72,6 @@
    </div>
 </div>
 <!-- begin script -->
-<!-- <script src="../public/scripts/require.js" data-main="../public/scripts/user"></script> -->
-<script src="../public/scripts/lib/jquery-2.1.4.min.js"></script>
-<script src="../public/scripts/lib/highcharts.js"></script>
-<script src="../public/scripts/profit.js"></script>
+<script src="../public/scripts/require.js" data-main="../public/scripts/orders"></script>
 </body>
 </html>

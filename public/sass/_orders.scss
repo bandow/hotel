@@ -444,3 +444,189 @@ orders
         color:#666;	
     }
 }
+/*
+orders-report
+*/
+.profit-list{
+	position:relative;
+	margin:5% 0;
+	background-color:#fff;
+	height: 1.6rem;
+	&:before{
+		content:"";
+		position: absolute;
+		width: 0;
+		height:0;
+		border-left: .3rem solid transparent;
+	    border-right: .3rem  solid transparent;
+	    border-top: .3rem  solid #fff;
+	    left: 50%;
+        top: 100%;
+        z-index: 1;
+        @include transform(translate(-50%, 0));
+	}
+	.radio-text{
+	   height:1rem;
+       border:1px solid #ccc;
+       position:relative;
+       color:#4e4e4e;
+	   font:.4rem/1.1rem "Microsoft YaHei";
+       margin:0 2%;
+       padding:0 2%;
+       &:before{
+			content: "";
+		    position: absolute;
+		    width: 0;
+		    height: 0;
+		    border-left: .2rem solid transparent;
+		    border-right: .2rem solid transparent;
+		    border-top: .2rem solid #cacaca;
+		    right: 4%;
+		    top: 50%;
+		    z-index: 1;
+	        @include transform(translate(0, -50%));
+		}
+       span{
+           	width: .48rem;
+		    height: .5rem;
+		    float: left;
+		    margin: .245rem .1rem 0 0;
+		    border:1px solid #ccc;
+		    border-radius:3px;
+		    position:relative;
+	       	&:before{
+	       	  	content: "";
+			    position: absolute;
+			    top: -5%;
+			    left: 5%;
+			    width: .2rem;
+			    height: .1rem;
+			    background-color: #666;
+			    transform: rotate(50deg) translate(100%, 150%);
+	       	}
+	       	&:after{
+	       	  	content: "";
+			    position: absolute;
+			    top: -5%;
+			    left: 5%;
+			    width: .35rem;
+			    height: .1rem;
+			    background-color: #666;
+			    transform: rotate(-45deg) translate(-30%, 170%);
+	       	}
+       }
+	}
+	dl{
+		padding:0 2%;
+		position:absolute;
+		width: 100%;
+		background-color:#fff;
+		z-index:2;
+		max-height:7rem;
+        overflow: auto;
+        display: none;
+		dd{
+           color:#4e4e4e;
+           font:.4rem/1.1rem "Microsoft YaHei";
+           padding:0 2%;
+           span{
+	           	width: .48rem;
+			    height: .5rem;
+			    float: left;
+			    margin:.24rem .1rem 0 0;
+			    border:1px solid #ccc;
+			    border-radius:3px;
+	       }
+		}
+		.active{
+           span{
+           	position:relative;
+	       	  &:before{
+	       	  	content: "";
+			    position: absolute;
+			    top: -5%;
+			    left: 5%;
+			    width: .2rem;
+			    height: .1rem;
+			    background-color: #666;
+			    transform: rotate(50deg) translate(100%, 150%);
+	       	  }
+	       	  &:after{
+	       	  	content: "";
+			    position: absolute;
+			    top: -5%;
+			    left: 5%;
+			    width: .35rem;
+			    height: .1rem;
+			    background-color: #666;
+			    transform: rotate(-45deg) translate(-30%, 170%);
+	       	  }
+	       }
+		}
+	}
+}
+.profit-surface{	
+	margin-top:2%;
+	background-color:#fff;
+	width: 100%;
+    overflow: hidden;
+    position:relative;
+    .l{
+    	content:"";
+		position: absolute;
+		width: 0;
+		height:0;
+		border-top: .2rem solid transparent;
+	    border-bottom: .2rem  solid transparent;
+	    border-right: .2rem  solid #cacaca;
+	    left:.1%;
+	    top: .4rem;
+	    z-index: 1;
+	    //@include transform(translate(0,-200%));
+    }
+    .r{
+    	content:"";
+		position: absolute;
+		width: 0;
+		height:0;
+		border-top: .2rem solid transparent;
+	    border-bottom: .2rem  solid transparent;
+	    border-left: .2rem  solid #cacaca;
+	    right:.1%;
+	    top: .4rem;
+	    z-index: 1;
+	    //@include transform(translate(0,-200%));
+    }
+	ul{
+		width:240vw;
+		margin-left:-60vw;
+		height: 1.2rem;
+		overflow: hidden;
+        border-bottom:1px solid #ccc;
+        transition:all .5s;
+        -webkit-transition:all .5s;
+        li{
+			font:.36rem/1.2rem "Microsoft YaHei";
+			float: left;
+			text-align: center;
+			width:20vw;
+			color:#4e4e4e;
+		}
+		.active{
+			color:#000;
+			position:relative;
+			&:before{
+               content:"";
+               width:20vw;
+               height: 2px;
+               background-color:#008077;
+               position:absolute;
+               left:0;
+               bottom:0;
+			}
+		}
+	}
+	.profit-surface{
+		display:none;
+	}
+}

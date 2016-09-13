@@ -22,7 +22,7 @@
     $(".confirm").on("click",function(){
        $(this).parent().parent().find("dd").hide();
     });
-    $(".m-hotel").children().children().not(".profit-list").on("click",function(){
+    $(".container").children().not(".profit-list").on("click",function(){
        $(".profit-list dd").hide();
     });
 
@@ -96,13 +96,13 @@
     $(function(){
          $('#profit-surface6').highcharts({
             chart: {
-                type: 'bar'
+                type: 'bar',
             },
             title: {
-                text: 'Historic World Population by Region'
+                text: ''
             },
             subtitle: {
-                text: 'Source: Wikipedia.org'
+                text: ''
             },
             xAxis: {
                 lineColor: "#ccc",
@@ -110,7 +110,7 @@
                     y: 5, //x轴刻度往下移动20px
                     x:-20,
                     style: {
-                        color: '#000',//颜色
+                        color: '#333',//颜色
                         fontSize:'14px'  //字体
                     }
                 },
@@ -130,7 +130,7 @@
                 }
             },
             tooltip: {
-                valueSuffix: ' millions'
+                valueSuffix: '元'
             },
             plotOptions: {
                 bar: {
@@ -143,7 +143,7 @@
                 layout: 'vertical',
                 align: 'right',
                 verticalAlign: 'top',
-                x: -40,
+                x: -640,
                 y: 50,
                 floating: true,
                 borderWidth: 1,
@@ -163,6 +163,7 @@
                        {'color':'#008E8E','y':368.7},
                        {'color':'#ffa100','y':108.5},
                        {'color':'#008E8E','y':170.89}],
+                name: '金额',
             }]
           });
       }); 
