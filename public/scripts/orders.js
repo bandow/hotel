@@ -1,29 +1,15 @@
 requirejs.config({
     paths: {
-        jquery: 'lib/jquery-3.1.0.min',
-        swiper: 'lib/swiper-3.3.1.min'
+        jquery: 'lib/jquery-3.1.0.min'
     }
 });
 
-requirejs(['jquery','common','swiper'],function($,common,swiper,){  
+requirejs(['jquery','common'],function($,common){  
   $(document).ready(function () {
     //orders-submit
     $(".names i").on("click",function(){
         $(this).parent().hide();         
     });
-
-    var mySwiper = new Swiper('#swiper-container3',{
-  			pagination: '.my-pagination',
-  			paginationClickable: true,
-  			paginationBulletRender: function (index, className) {
-    			switch (index) {
-    			  case 0: name='有效订单';break;
-    			  case 1: name='历史订单';break;
-    			  default: name='';
-    			}
-  			  return '<span class="' + className + '">' + name + '</span>';
-  			}
-  	}); 
 
     //orders-report
     $(".profit-list dl dd:even").css("backgroundColor","#f4f4f4");
@@ -45,9 +31,6 @@ requirejs(['jquery','common','swiper'],function($,common,swiper,){
       $(".profit-list dl").hide();
     });
     
-
-
-
     $(".profit-surface ul li").on("click",function(){
        $(this).addClass("active").siblings().removeClass("active");
        $('.profit-surface-all .profit-surface').eq($(this).index()).show().siblings().hide();
