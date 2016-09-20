@@ -22,5 +22,7 @@ requirejs(['jquery','common'],function($,common){
       });
       $(".m-hotel").css("paddingBottom",0);
     }
+    
+    
   });   
 });
