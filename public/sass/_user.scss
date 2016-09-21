@@ -978,3 +978,189 @@ user-collect
 		}
 	}
 }
+/*
+user comment
+*/
+.comment-list{
+	background-color:#fff;
+	padding:0 2%;
+	margin-top:2%;
+	.comment-title{
+		position:relative;
+		width:100%;
+		h2{
+			font:.4rem/1.2rem "Microsoft YaHei";
+			color:#454545;
+			border-bottom:1px solid #f4f4f4;
+		}
+		i{
+			position:absolute;
+			color:#ccc;
+			top:0;
+			right:0;
+			display:block;
+			line-height:1.2rem;
+			font-size:.4rem;
+		}
+	}
+	.comment-text{
+		width:100%;
+		padding:2% 0;
+		.l{
+			float:left;
+			width:1.2rem;
+			height:1.2rem;
+			border-radius:100%;
+		}
+		.r{
+			margin-left:1.4rem;
+			h3{
+				font:.36rem/1.2 "Microsoft YaHei";
+				margin-bottom:.3rem;
+				span{
+					font-size:.32rem;
+					float:right;
+				}
+			}
+			p{
+				font:.36rem/1.5 "Microsoft YaHei";
+			}
+			.img-list{
+				margin:.3rem 0;
+				ul li{
+					float:left;
+					margin-right:.2rem;
+					width:28%;
+					img{
+						width:100%;
+					}
+				}
+			}
+			.time{
+				font-size:.32rem;
+				color:#a0a0a0;
+				a{
+					color:#008077;
+					text-decoration:none;
+				}
+			}
+		}
+	}
+}
+/*
+publish comment
+*/
+.publish-comment{
+	background-color:#fff;
+	padding:0 2% 2%;
+	margin-top:2%;
+	height:auto;
+	overflow:hidden;
+	h2{
+		width: 100%;
+	    height: 1rem;
+	    font: .36rem/1rem "Microsoft YaHei";
+	    color: #454545;
+	    border-bottom: 1px solid #ccc;
+	}
+	.publish-comment-text{
+		padding:2% 0;
+		position:relative;
+		height:auto;
+	    overflow:hidden;
+		img{
+			float:left;
+			width:40%;
+		}
+		.text-r{
+			margin-left: 42%;
+			p{
+				font: .33rem/1.5 "Microsoft YaHei";
+                color: #999;
+                span{
+                	color: #008077;
+                }
+			}
+			.time{
+				color: #008077;
+			}
+		}
+		i{
+			position:absolute;
+			right:0;
+			top:50%;
+			color:#999;
+			@include transform(translate(0,-50%));
+		}
+	}
+	.grade{
+		h3{
+			font: .36rem/1rem "Microsoft YaHei";
+	        color: #454545;
+	        span{
+	        	color:#999;
+	        }
+		}
+		.grade-list{
+            .grade-img{
+            	width: 80%;
+                margin: 0 auto;
+            	height:30px;
+                background: url(/public/images/user/publish6.png) no-repeat;	            
+	            div{
+	            	width:20%;
+	            	height:100%;
+	            	float:left;
+	            }
+            }
+            .g1{
+            	background: url(/public/images/user/publish6.png) no-repeat;
+            	background-size: 100%;
+            }
+            .g2{
+            	background: url(/public/images/user/publish5.png) no-repeat;
+            	background-size: 100%;
+            }
+            .g3{
+            	background: url(/public/images/user/publish4.png) no-repeat;
+            	background-size: 100%;
+            }
+            .g4{
+            	background: url(/public/images/user/publish3.png) no-repeat;
+            	background-size: 100%;
+            }
+            .g5{
+            	background: url(/public/images/user/publish2.png) no-repeat;
+            	background-size: 100%;
+            }
+            .g6{
+            	background: url(/public/images/user/publish1.png) no-repeat;
+            	background-size: 100%;
+            }
+            ul{
+            	width:90%;
+            	margin:0 auto;
+            	li{
+            		float:left;
+            		width:20%;
+            		text-align:center;
+            		font: .36rem/1rem "Microsoft YaHei";
+            	}
+            }
+	    }
+	}
+}
+.words{
+	background-color:#fff;
+	padding:2%;
+	margin-top:2%;
+	height:4rem;
+	textarea{
+		border:0;
+		background:none;
+		outline: none;
+		width:100%;
+		height:100%;
+		font: .36rem/1.2 "Microsoft YaHei";
+	}
+}

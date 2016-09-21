@@ -8,5 +8,5 @@ define(['jquery'],function($){
 		   $("html").css('fontSize','24px');
 		}
 	});	
-
+	
 });
