@@ -13,10 +13,10 @@
 	}
 }
 .lists{
-	margin:2% 0;
+    margin:2% 0;
 }
 .hotel-list{
-	 text-decoration: none;
+	text-decoration: none;
 	.img{
 		width:100%;
 		position:relative;
@@ -135,3 +135,225 @@
 	    z-index: 1;
 	}
 }
+
+/*g-page*/
+.g-page{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index: 1;
+    background-color:#fff;
+}
+.search-header{
+	background-color:#fff;
+	border-bottom:1px solid #f4f4f4;
+	height:6.8vh;
+	padding:0 2%;
+	.left{
+		float:left;
+		width:10%;
+		text-decoration:none;
+	    display:block;
+	    i{
+	   	   line-height:1.2rem;
+	       display:block;
+	       color:#4e4e4e;
+	       font-size:.7rem;
+	    }
+	}
+	h1{
+		float:left;
+		width:80%;
+		font:.4rem/6.8vh "Microsoft YaHei";
+		color:#4e4e4e;
+		margin:0;
+		text-align:center;
+	}
+}
+.g-page-text{
+  height:93.2vh;
+  width:100%;
+  .page-ul-list{
+  	display: -webkit-box;
+  	border-bottom:1px solid #f4f4f4;
+  	height:6.8vh;
+  	.li{
+       -webkit-box-flex: 1;
+	    -webkit-flex: 1;
+	    flex: 1;
+	    text-align: center;
+	    font:.36rem/6.8vh "Microsoft YaHei";
+	    &:first-child{
+	    	border-right:1px solid #f4f4f4;
+	    }
+	    .icon-sanjiao{
+	    	display:inline-block;
+	    }
+  		.icon-sanjiao-copy{
+  			display:none;
+  		}
+	    i{
+	    	font-size:.32rem;
+	    	color:#4d4d4d;
+	    	margin-left:.2rem;
+	    }
+  	}
+  	.active{
+  		color:#008077;
+  		i{
+  			color:#008077;
+  		}
+  		.icon-sanjiao{
+	    	display:none;
+	    }
+	    .icon-sanjiao-copy{
+  			display:inline-block;
+  		}
+  	}
+  }
+}
+.g-page-all{
+	.g-page-list{
+		display:none;
+		height:93.2vh;
+        overflow: auto;
+	}
+}
+.g-areaList{
+	position: fixed;
+    top: 13.6vh;
+    left: 0;
+    bottom: 0;
+    width: 35%;
+    text-align: center;
+    background-color:#f3f3f3;
+    dd{
+    	width: 100%;
+        line-height: 48px;
+        border-bottom:1px solid #f4f4f4;
+        font:.4rem/6.8vh "Microsoft YaHei";
+    }
+    .z-active{
+    	color: #008077;
+        background: #fff;
+    }
+}
+.g-areaItem{
+	position: absolute;
+    top: 13.6vh;
+    right: 0;
+    width: 65%;
+    min-height: 100%;
+    background: #fff;
+    .g-areaItem-list{
+    	display:none;
+    	dd{
+    	width: 100%;
+        line-height: 48px;
+        border-bottom:1px solid #f4f4f4;
+        font:.4rem/6.8vh "Microsoft YaHei";
+        padding-left:1rem;
+	    }
+	    .l-active{
+	    	position:relative;
+	    	color: #008077;
+	        background: #fff;
+	        i{
+	        	position:absolute;
+	        	top:0;
+	        	left:.3rem;
+	        }
+	    }
+	    input{
+	    	font:.36rem/1.2rem "Microsoft YaHei";
+			background:none;
+			border:none;
+			outline:none;
+			-webkit-appearance:none;
+			appearance:none;
+			background-color:#008077;
+			color:#fff;
+			width:100%;
+	    }
+    }
+}
+.m-items{
+	padding:2%;
+	border-bottom:1px solid #f4f4f4;
+	h3{
+		color:#4d4d4d;
+		font:.36rem/1.2rem "Microsoft YaHei";
+	}
+}
+.m-items-b{
+	ul{
+	    height: auto;
+	    overflow: hidden;
+		li{
+			float: left;
+		    border: 1px solid #ccc;
+		    width: 23.5%;
+		    margin: 0 2% 2.5% 0;
+		    font: .36rem/1 "Microsoft YaHei";
+		    padding: .2rem 0;
+		    text-align: center;
+		    color: #4d4d4d;
+		    display: block;
+		    &:nth-child(4n) {
+			    margin-right: 0;
+			}
+		}
+		.active{
+			background-color:#008077;
+			border: 1px solid #008077;
+			color:#fff;
+		}
+	}
+}
+.m-items-t{
+	ul{
+		display: -webkit-box;
+		li{
+			position:relative;
+	        -webkit-box-flex: 1;
+		    -webkit-flex: 1;
+		    flex: 1;
+		    text-align: center;
+		    font:.36rem/3 "Microsoft YaHei";
+		    &:before{
+		    	content:".";
+		    	position:absolute;
+		    	bottom:-20%;
+		    	left:50%;
+		    }
+		}
+	}
+}
+.m-items-fixed{
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:100%;
+	ul{
+		display: -webkit-box;
+		li{
+			position:relative;
+	        -webkit-box-flex: 1;
+		    -webkit-flex: 1;
+		    flex: 1;
+		    text-align: center;
+		    font:.36rem/1.2rem "Microsoft YaHei";
+		    background-color:#a5a5a5;
+		    width:35%;
+		    color:#fff;
+		    &:last-child{
+		    	background-color:#008077;
+		        width:65%;
+		    }
+		}
+	}
+}
+
+

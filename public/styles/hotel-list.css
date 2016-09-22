@@ -376,4 +376,188 @@ optgroup {
   width: 18%;
   z-index: 1; }
 
+/*g-page*/
+.g-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #fff; }
+
+.search-header {
+  background-color: #fff;
+  border-bottom: 1px solid #f4f4f4;
+  height: 6.8vh;
+  padding: 0 2%; }
+  .search-header .left {
+    float: left;
+    width: 10%;
+    text-decoration: none;
+    display: block; }
+    .search-header .left i {
+      line-height: 1.2rem;
+      display: block;
+      color: #4e4e4e;
+      font-size: .7rem; }
+  .search-header h1 {
+    float: left;
+    width: 80%;
+    font: .4rem/6.8vh "Microsoft YaHei";
+    color: #4e4e4e;
+    margin: 0;
+    text-align: center; }
+
+.g-page-text {
+  height: 93.2vh;
+  width: 100%; }
+  .g-page-text .page-ul-list {
+    display: -webkit-box;
+    border-bottom: 1px solid #f4f4f4;
+    height: 6.8vh; }
+    .g-page-text .page-ul-list .li {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+      text-align: center;
+      font: .36rem/6.8vh "Microsoft YaHei"; }
+      .g-page-text .page-ul-list .li:first-child {
+        border-right: 1px solid #f4f4f4; }
+      .g-page-text .page-ul-list .li .icon-sanjiao {
+        display: inline-block; }
+      .g-page-text .page-ul-list .li .icon-sanjiao-copy {
+        display: none; }
+      .g-page-text .page-ul-list .li i {
+        font-size: .32rem;
+        color: #4d4d4d;
+        margin-left: .2rem; }
+    .g-page-text .page-ul-list .active {
+      color: #008077; }
+      .g-page-text .page-ul-list .active i {
+        color: #008077; }
+      .g-page-text .page-ul-list .active .icon-sanjiao {
+        display: none; }
+      .g-page-text .page-ul-list .active .icon-sanjiao-copy {
+        display: inline-block; }
+
+.g-page-all .g-page-list {
+  display: none;
+  height: 93.2vh;
+  overflow: auto; }
+
+.g-areaList {
+  position: fixed;
+  top: 13.6vh;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  text-align: center;
+  background-color: #f3f3f3; }
+  .g-areaList dd {
+    width: 100%;
+    line-height: 48px;
+    border-bottom: 1px solid #f4f4f4;
+    font: .4rem/6.8vh "Microsoft YaHei"; }
+  .g-areaList .z-active {
+    color: #008077;
+    background: #fff; }
+
+.g-areaItem {
+  position: absolute;
+  top: 13.6vh;
+  right: 0;
+  width: 65%;
+  min-height: 100%;
+  background: #fff; }
+  .g-areaItem .g-areaItem-list {
+    display: none; }
+    .g-areaItem .g-areaItem-list dd {
+      width: 100%;
+      line-height: 48px;
+      border-bottom: 1px solid #f4f4f4;
+      font: .4rem/6.8vh "Microsoft YaHei";
+      padding-left: 1rem; }
+    .g-areaItem .g-areaItem-list .l-active {
+      position: relative;
+      color: #008077;
+      background: #fff; }
+      .g-areaItem .g-areaItem-list .l-active i {
+        position: absolute;
+        top: 0;
+        left: .3rem; }
+    .g-areaItem .g-areaItem-list input {
+      font: .36rem/1.2rem "Microsoft YaHei";
+      background: none;
+      border: none;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: #008077;
+      color: #fff;
+      width: 100%; }
+
+.m-items {
+  padding: 2%;
+  border-bottom: 1px solid #f4f4f4; }
+  .m-items h3 {
+    color: #4d4d4d;
+    font: .36rem/1.2rem "Microsoft YaHei"; }
+
+.m-items-b ul {
+  height: auto;
+  overflow: hidden; }
+  .m-items-b ul li {
+    float: left;
+    border: 1px solid #ccc;
+    width: 23.5%;
+    margin: 0 2% 2.5% 0;
+    font: .36rem/1 "Microsoft YaHei";
+    padding: .2rem 0;
+    text-align: center;
+    color: #4d4d4d;
+    display: block; }
+    .m-items-b ul li:nth-child(4n) {
+      margin-right: 0; }
+  .m-items-b ul .active {
+    background-color: #008077;
+    border: 1px solid #008077;
+    color: #fff; }
+
+.m-items-t ul {
+  display: -webkit-box; }
+  .m-items-t ul li {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: center;
+    font: .36rem/3 "Microsoft YaHei"; }
+    .m-items-t ul li:before {
+      content: ".";
+      position: absolute;
+      bottom: -20%;
+      left: 50%; }
+
+.m-items-fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+  .m-items-fixed ul {
+    display: -webkit-box; }
+    .m-items-fixed ul li {
+      position: relative;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+      text-align: center;
+      font: .36rem/1.2rem "Microsoft YaHei";
+      background-color: #a5a5a5;
+      width: 35%;
+      color: #fff; }
+      .m-items-fixed ul li:last-child {
+        background-color: #008077;
+        width: 65%; }
+
 /*# sourceMappingURL=hotel-list.css.map */

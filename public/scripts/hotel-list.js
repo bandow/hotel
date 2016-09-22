@@ -7,13 +7,45 @@ requirejs.config({
 
 requirejs(['zepto','dropload'],function(zepto,dropload){  
     $(document).ready(function () {
-       console.log("zepto已经调进来了");
 
        var size=$(window).width()/10;
         $("html").css('fontSize',size);
         if($(window).width()>=640){
            $("html").css('fontSize','24px');
         }
+
+        $(".search-header .left").on("click",function(){
+             $(".g-page").hide();
+        });
+
+        $(".page-ul-list li").on("click",function(){
+           $(this).addClass("active").siblings().removeClass("active");
+           $(".g-page-all .g-page-list").eq($(this).index()).show().siblings().hide();
+        });
+
+        $(".g-areaList dd").on("click",function(){
+           $(this).addClass("z-active").siblings().removeClass("z-active");
+           $(".g-areaItem .g-areaItem-list").eq($(this).index()).show().siblings().hide();
+        });
+
+        $(".g-areaItem-list dl dd").on("click",function(){
+            $(this).addClass("l-active").siblings().removeClass("l-active");
+            if($(this).find("i").size()>=1){
+                return false;
+            }else{   
+                $(this).append("<i class='iconfont icon-dagou'></i>").siblings().find("i").remove();
+            }
+        });
+
+
+
+        $(".m-ul-c li").on("click",function(){
+           $(this).addClass("active").siblings().removeClass("active");
+        });
+        $(".m-ul-b li").on("click",function(){
+           $(this).addClass("active").siblings().removeClass("active");
+        });
+
     });
     $(function(){
         var counter = 0;
