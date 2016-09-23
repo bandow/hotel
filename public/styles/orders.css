@@ -404,6 +404,166 @@ orders-submit
     text-align: center;
     text-decoration: none; }
 
+.order-check-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #fff;
+  overflow: auto;
+  display: none; }
+
+.check-in-header {
+  background-color: #fff;
+  border-bottom: 1px solid #f4f4f4;
+  height: 6.8vh;
+  padding: 0 2%; }
+  .check-in-header .left {
+    float: left;
+    width: 10%;
+    text-decoration: none;
+    display: block; }
+    .check-in-header .left i {
+      line-height: 1.2rem;
+      display: block;
+      color: #4e4e4e;
+      font-size: .7rem; }
+  .check-in-header h1 {
+    float: left;
+    width: 80%;
+    font: .4rem/6.8vh "Microsoft YaHei";
+    color: #4e4e4e;
+    margin: 0;
+    text-align: center; }
+
+.head {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding-bottom: .2rem; }
+  .head a {
+    background-color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font: .36rem/1.2 "Microsoft YaHei";
+    display: block;
+    padding: .35rem 0;
+    color: #008077; }
+    .head a i {
+      margin-right: .2rem;
+      display: inline-block; }
+
+.text-list {
+  width: 100%;
+  margin-bottom: 1rem; }
+  .text-list .list-info {
+    padding: 2%;
+    width: 100%;
+    display: table;
+    border-bottom: 1px solid #f4f4f4; }
+    .text-list .list-info .l {
+      vertical-align: middle;
+      display: inline-block;
+      width: 10%; }
+    .text-list .list-info .icon-select {
+      color: #999;
+      display: inline-block; }
+    .text-list .list-info .icon-iconfontzhichi {
+      color: #008077;
+      display: none; }
+    .text-list .list-info .info {
+      vertical-align: middle;
+      display: inline-block;
+      width: 80%; }
+      .text-list .list-info .info p {
+        font: .36rem/1.5 "Microsoft YaHei";
+        color: #696969; }
+        .text-list .list-info .info p:first-child {
+          color: #000; }
+    .text-list .list-info .r {
+      vertical-align: middle;
+      display: inline-block;
+      width: 10%;
+      text-align: right;
+      color: #ccc; }
+  .text-list .list-info-active .icon-select {
+    color: #999;
+    display: none; }
+  .text-list .list-info-active .icon-iconfontzhichi {
+    color: #008077;
+    display: inline-block; }
+
+.btn {
+  font: .36rem/1.2rem "Microsoft YaHei";
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #008077;
+  color: #fff;
+  width: 100%; }
+
+.add-order-check-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: #f4f4f4;
+  overflow: auto;
+  display: none; }
+
+.add-check-in-header {
+  background-color: #fff;
+  border-bottom: 1px solid #f4f4f4;
+  height: 6.8vh;
+  padding: 0 2%;
+  margin-bottom: .2rem; }
+  .add-check-in-header .left {
+    float: left;
+    width: 10%;
+    text-decoration: none;
+    display: block; }
+    .add-check-in-header .left i {
+      line-height: 1.2rem;
+      display: block;
+      color: #4e4e4e;
+      font-size: .7rem; }
+  .add-check-in-header h1 {
+    float: left;
+    width: 80%;
+    font: .4rem/6.8vh "Microsoft YaHei";
+    color: #4e4e4e;
+    margin: 0;
+    text-align: center; }
+
+.add-yo-list {
+  padding: 2%;
+  background-color: #fff; }
+  .add-yo-list .item {
+    overflow: hidden;
+    background-color: #fff;
+    color: #212121;
+    font: .36rem/1rem "Microsoft YaHei";
+    position: relative;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #f4f4f4; }
+    .add-yo-list .item .mark {
+      width: 20%;
+      display: inline-block; }
+    .add-yo-list .item .yo-input {
+      width: 75%;
+      display: inline-block;
+      background: none;
+      border: none;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none; }
+
 /*
 orders-info
 */
@@ -553,6 +713,71 @@ orders-live
     .orders-live-bottom .map img {
       width: 100%;
       height: 100%; }
+
+.upload-img {
+  background-color: #fff;
+  padding: 0 2%;
+  height: auto;
+  overflow: hidden; }
+  .upload-img .l {
+    float: left;
+    width: 45%;
+    background-color: #f1f1f1;
+    margin: 4% 2%; }
+  .upload-img .r {
+    float: right;
+    width: 45%;
+    background-color: #f1f1f1;
+    margin: 4% 2%; }
+
+.control-group {
+  padding: 5%; }
+  .control-group p {
+    text-align: center;
+    font: .36rem/1.2rem "Microsoft YaHei"; }
+  .control-group img {
+    width: 100%; }
+
+.btn-upload {
+  width: 100%;
+  height: 1.2rem;
+  position: relative;
+  margin: 10px 0; }
+
+.btn-upload a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #008077;
+  background: #f1f1f1;
+  border: 1px solid #70b5b0;
+  text-decoration: none;
+  border-radius: 3px;
+  font: .36rem/1.2rem "Microsoft YaHei"; }
+
+.btn-upload input {
+  width: 100%;
+  height: 1.2rem;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+  cursor: pointer; }
+
+.check-in-btn {
+  font: .36rem/1.2rem "Microsoft YaHei";
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #008077;
+  color: #fff;
+  width: 100%;
+  text-align: center; }
 
 /*
 orders

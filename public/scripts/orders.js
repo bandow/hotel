@@ -7,9 +7,7 @@ requirejs.config({
 requirejs(['jquery','common'],function($,common){  
   $(document).ready(function () {
     //orders-submit
-    $(".names i").on("click",function(){
-        $(this).parent().hide();         
-    });
+    
 
     //orders-report
     $(".profit-list dl dd:even").css("backgroundColor","#f4f4f4");

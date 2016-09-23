@@ -384,7 +384,8 @@ optgroup {
   right: 0;
   bottom: 0;
   z-index: 1;
-  background-color: #fff; }
+  background-color: #fff;
+  display: none; }
 
 .search-header {
   background-color: #fff;
@@ -538,6 +539,49 @@ optgroup {
       position: absolute;
       bottom: -20%;
       left: 50%; }
+  .m-items-t ul .line-active {
+    color: #008077; }
+    .m-items-t ul .line-active:before {
+      color: #008077; }
+
+.line {
+  padding: 0 4%;
+  position: relative; }
+  .line input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: hidden;
+    background-image: -webkit-linear-gradient(top, #ccc, #ccc);
+    background-image: linear-gradient(to bottom, #ccc, #ccc);
+    background-size: 100% .04rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 2rem; }
+    .line input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      cursor: default;
+      top: -.4rem;
+      height: .8rem;
+      width: .8rem;
+      background: none repeat scroll 0 0 #008077;
+      border-radius: 100%; }
+  .line:after {
+    pointer-events: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    content: "\0020";
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; }
 
 .m-items-fixed {
   position: fixed;

@@ -23,7 +23,7 @@
     	<i class="iconfont icon-fanhui"></i>
     </a>
 	<h1>家庭出游</h1>
-	<a href="#" class="right">
+	<a href="#" class="right" id="click-g">
 		<i class="iconfont icon-sousuo"></i>
 	</a>
 </header>
@@ -116,7 +116,7 @@
 			<div class="g-page-list">
 				<div class="m-items m-items-t">
 					<h3>价格</h3>
-					<ul>
+					<ul id="line-ul">
 						<li>￥0</li>
 						<li>￥500</li>
 						<li>￥1000</li>
@@ -124,6 +124,13 @@
 						<li>￥2000</li>
 						<li>不限</li>
 					</ul>
+					<div class="line" id="line">
+						<form method="post">
+						    <input type="range" name="range" min="0" max="5" step="0" value="0" />
+						    <!-- <output name="result">  </output> -->
+						</form>			
+					</div>
+
 				</div>
 				<div class="m-items m-items-b">
 					<h3>排序</h3>
@@ -145,7 +152,7 @@
 				</div>
 				<div class="m-items-fixed">
 					<ul>
-						<li>清空</li>
+						<li id="empty">清空</li>
 						<li>确定</li>
 					</ul>
 				</div>

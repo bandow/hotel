@@ -1164,3 +1164,73 @@ publish comment
 		font: .36rem/1.2 "Microsoft YaHei";
 	}
 }
+/*
+user-card-coupons
+*/
+.card-h4{
+	font: .32rem/1.5 "Microsoft YaHei";
+	text-align:center;
+	color:#4e4e4e;
+}
+.card{
+	padding:2%;
+	.card-coupons-list{
+		width:100%;
+		height:auto;
+		overflow:hidden;
+		margin-bottom:.3rem;
+		.l{
+           float:left;
+           width:30%;
+           height:2rem;
+           background:url(/public/images/user/card.png) no-repeat;
+           background-size:100% auto;
+           padding:.3rem 0;
+           h2{
+              font: .5rem/1.5 "Microsoft YaHei";
+              color:#fff;
+              text-align:center;
+           }
+           p{
+           	  font: .32rem/1.5 "Microsoft YaHei";
+           	  color:#fff;
+           	  text-align:center;
+           }
+		}
+		.text{
+			background-color:#fff;
+			padding:2%;
+            margin-left:30%;
+            position:relative;
+            h2{
+              font: .42rem/1.5 "Microsoft YaHei";
+              color:#000;
+           }
+           p{
+           	  font: .32rem/1.5 "Microsoft YaHei";
+           	  color:#4e4e4e;
+           }
+           a{
+           	  position:absolute;
+           	  font: .32rem/1.5 "Microsoft YaHei";
+           	  color:#008077;
+           	  text-decoration:none;
+           	  right:.2rem;
+           	  top:1.3rem;
+           }
+           .text-b{
+           	display:none;
+           	  h3{
+           	  	 font: .4rem/1.5 "Microsoft YaHei";
+                 color:#000;
+           	  }
+           	  p{
+           	  	color:#666;
+           	  }
+           }
+		}
+	}
+}
+/*
+user-stored-value
+*/

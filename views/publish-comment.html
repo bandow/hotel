@@ -60,6 +60,60 @@
    </div> 
 </div>
 <!-- begin script -->
-<script src="../public/scripts/require.js" data-main="../public/scripts/user"></script>
+<script src="../public/scripts/lib/jquery.min.js"></script>
+
+<script>
+   $(document).ready(function () { 
+    //publish comment
+    var size=$(window).width()/10;
+      $("html").css('fontSize',size);
+    if($(window).width()>=640){
+       $("html").css('fontSize','24px');
+    }
+
+    $(".img1").on("click",function(){
+      $(this).parent().addClass("g5");
+      $(this).parent().removeClass("g6");
+      $(this).parent().removeClass("g4");
+      $(this).parent().removeClass("g3");
+      $(this).parent().removeClass("g2");
+      $(this).parent().removeClass("g1");
+    });
+    $(".img2").on("click",function(){
+      $(this).parent().addClass("g4");
+      $(this).parent().removeClass("g6");
+      $(this).parent().removeClass("g5");
+      $(this).parent().removeClass("g3");
+      $(this).parent().removeClass("g2");
+      $(this).parent().removeClass("g1");
+    });
+    $(".img3").on("click",function(){
+      $(this).parent().addClass("g3");
+      $(this).parent().removeClass("g6");
+      $(this).parent().removeClass("g5");
+      $(this).parent().removeClass("g4");
+      $(this).parent().removeClass("g2");
+      $(this).parent().removeClass("g1");
+    });
+    $(".img4").on("click",function(){
+      $(this).parent().addClass("g2");
+      $(this).parent().removeClass("g6");
+      $(this).parent().removeClass("g5");
+      $(this).parent().removeClass("g3");
+      $(this).parent().removeClass("g4");
+      $(this).parent().removeClass("g1");
+    });
+    $(".img5").on("click",function(){
+      $(this).parent().addClass("g1");
+      $(this).parent().removeClass("g6");
+      $(this).parent().removeClass("g5");
+      $(this).parent().removeClass("g3");
+      $(this).parent().removeClass("g2");
+      $(this).parent().removeClass("g4");
+    });
+
+
+   }); 
+</script>
 </body>
 </html>

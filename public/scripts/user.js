@@ -29,49 +29,19 @@ requirejs(['jquery','common'],function($,common){
             return;
         }     
     });
-    //publish comment
-    $(".img1").on("click",function(){
-      $(this).parent().addClass("g5");
-      $(this).parent().removeClass("g6");
-      $(this).parent().removeClass("g4");
-      $(this).parent().removeClass("g3");
-      $(this).parent().removeClass("g2");
-      $(this).parent().removeClass("g1");
-    });
-    $(".img2").on("click",function(){
-      $(this).parent().addClass("g4");
-      $(this).parent().removeClass("g6");
-      $(this).parent().removeClass("g5");
-      $(this).parent().removeClass("g3");
-      $(this).parent().removeClass("g2");
-      $(this).parent().removeClass("g1");
-    });
-    $(".img3").on("click",function(){
-      $(this).parent().addClass("g3");
-      $(this).parent().removeClass("g6");
-      $(this).parent().removeClass("g5");
-      $(this).parent().removeClass("g4");
-      $(this).parent().removeClass("g2");
-      $(this).parent().removeClass("g1");
-    });
-    $(".img4").on("click",function(){
-      $(this).parent().addClass("g2");
-      $(this).parent().removeClass("g6");
-      $(this).parent().removeClass("g5");
-      $(this).parent().removeClass("g3");
-      $(this).parent().removeClass("g4");
-      $(this).parent().removeClass("g1");
-    });
-    $(".img5").on("click",function(){
-      $(this).parent().addClass("g1");
-      $(this).parent().removeClass("g6");
-      $(this).parent().removeClass("g5");
-      $(this).parent().removeClass("g3");
-      $(this).parent().removeClass("g2");
-      $(this).parent().removeClass("g4");
+
+    //user card coupons
+    $(".develop").on("click",function(){
+     if($(this).next().css("display")=="none"){
+        $(this).next().show();
+        $(this).text("收缩");
+      }else{
+       $(this).next().hide();
+       $(this).text("展开");
+      }
     });
 
-
+    
   });  
 
 });

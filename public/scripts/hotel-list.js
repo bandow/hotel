@@ -14,6 +14,10 @@ requirejs(['zepto','dropload'],function(zepto,dropload){
            $("html").css('fontSize','24px');
         }
 
+        $("#click-g").on("click",function(){
+            $(".g-page").show();
+        });
+
         $(".search-header .left").on("click",function(){
              $(".g-page").hide();
         });
@@ -37,7 +41,102 @@ requirejs(['zepto','dropload'],function(zepto,dropload){
             }
         });
 
+       
+        (function() {
+            var lineUl=document.getElementById("line-ul");
+            var lineLi=lineUl.getElementsByTagName("li");   
+            var empty=document.getElementById("empty");     
+            var f = document.forms[0],
+                range = f['range'],
+                // result = f['result'],
+                cachedRangeValue = localStorage.rangeValue ? localStorage.rangeValue : 0; 
 
+            // 检测浏览器是否是足够酷
+            // 识别range input.
+            var o = document.createElement('input');
+            o.type = 'range';
+            if ( o.type === 'text' ) alert('不好意思，你的浏览器还不够酷，试试最新的Opera浏览器吧。');
+
+            // 设置初始值
+            // 无论是否本地存储了，都设置值为0
+            range.value = cachedRangeValue;
+            // result.value = cachedRangeValue;
+
+            // 当用户选择了个值，更新本地存储
+            range.addEventListener("mouseup", function() {
+                console.log("你选择的值是：" + range.value + ". 我现在正在用本地存储保存此值。在现代浏览器上刷新并检测。");
+                localStorage ? (localStorage.rangeValue = range.value) : alert("数据保存到了数据库或是其他什么地方。");
+
+            }, false);
+
+            // 滑动时显示选择的值
+            range.addEventListener("change", function() {
+                // result.value = range.value;
+                if(range.value==0){
+                   lineLi[0].className="line-active"; 
+                   lineLi[1].className="";
+                   lineLi[2].className="";
+                   lineLi[3].className="";
+                   lineLi[4].className="";
+                   lineLi[5].className="";
+                }
+                if(range.value==1){  
+                  lineLi[0].className="line-active";                               
+                  lineLi[1].className="line-active";
+                  lineLi[2].className="";
+                   lineLi[3].className="";
+                   lineLi[4].className="";
+                   lineLi[5].className="";
+                }
+                if(range.value==2){  
+                  lineLi[0].className="line-active";                               
+                  lineLi[1].className="line-active";                              
+                  lineLi[2].className="line-active";
+                  lineLi[3].className="";
+                   lineLi[4].className="";
+                   lineLi[5].className="";
+                }
+                if(range.value==3){    
+                lineLi[0].className="line-active";                               
+                  lineLi[1].className="line-active";                              
+                  lineLi[2].className="line-active";                            
+                  lineLi[3].className="line-active";
+                   lineLi[4].className="";
+                   lineLi[5].className="";
+                }
+                if(range.value==4){   
+                lineLi[0].className="line-active";                               
+                  lineLi[1].className="line-active";                              
+                  lineLi[2].className="line-active";                            
+                  lineLi[3].className="line-active";                             
+                  lineLi[4].className="line-active";
+                  lineLi[5].className="";
+                }
+                if(range.value==5){   
+                  lineLi[0].className="line-active";                               
+                  lineLi[1].className="line-active";                              
+                  lineLi[2].className="line-active";                            
+                  lineLi[3].className="line-active";                             
+                  lineLi[4].className="line-active";                             
+                  lineLi[5].className="line-active";
+                }
+            }, false);
+
+            //
+            empty.onclick=function(){
+                range.value = cachedRangeValue;
+                lineLi[0].className="line-active"; 
+               lineLi[1].className="";
+               lineLi[2].className="";
+               lineLi[3].className="";
+               lineLi[4].className="";
+               lineLi[5].className="";
+            }
+        })();
+
+        $("#empty").on("click",function(){
+            $(".m-items li").removeClass("active");
+        });
 
         $(".m-ul-c li").on("click",function(){
            $(this).addClass("active").siblings().removeClass("active");
@@ -97,4 +196,7 @@ requirejs(['zepto','dropload'],function(zepto,dropload){
             }
         });
     });
+
+
+
 });
