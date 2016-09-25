@@ -183,7 +183,7 @@
 		width: 68px;
 	    height: 9pt;
 	    background: url(/public/images/detailed/stars.png) no-repeat;
-	    background-size: 100%;
+	    background-size:100% 100%;
 	    margin-bottom:.5rem;
 	}
 	.z-5{
@@ -316,6 +316,14 @@
 				    margin: 0 auto;
 				    padding-bottom: .2rem;
 			    }
+			}
+			.hide{
+				display: none;
+			}
+		}
+		.standard-botoom-ul-active{
+			.hide{
+				display: block;
 			}
 		}
 		a{

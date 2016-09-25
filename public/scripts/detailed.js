@@ -20,6 +20,17 @@ requirejs(['jquery','common','swiper'],function($,common,swiper){
             }
         });
 
+        $(".standard-botoom-a").on("click",function(){
+            var active=$(".standard-botoom-ul").hasClass("standard-botoom-ul-active");
+            if(active){
+               $(".standard-botoom-ul").removeClass("standard-botoom-ul-active");
+               $(this).text("全部");
+            }else{
+               $(".standard-botoom-ul").addClass("standard-botoom-ul-active");
+               $(this).text("收缩");
+            }
+        });
+
         var mySwiper1 = new Swiper('#swiper-container1',{
           watchSlidesProgress : true,
           watchSlidesVisibility : true,

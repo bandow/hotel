@@ -360,7 +360,7 @@ optgroup {
     width: 68px;
     height: 9pt;
     background: url(/public/images/detailed/stars.png) no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     margin-bottom: .5rem; }
   .comment .z-5 {
     background-position: 0 0; }
@@ -472,6 +472,10 @@ optgroup {
           display: block;
           margin: 0 auto;
           padding-bottom: .2rem; }
+      .device .standard-botoom .standard-botoom-ul .hide {
+        display: none; }
+    .device .standard-botoom .standard-botoom-ul-active .hide {
+      display: block; }
     .device .standard-botoom a {
       width: 30%;
       height: 1rem;
