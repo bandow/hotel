@@ -29,6 +29,14 @@ requirejs(['jquery','common','swiper'],function($,common,swiper){
           observeParents:true,//修改swiper的父元素时，自动初始化swiper
         });
 
+         var mySwiper1 = new Swiper('#swiper-container2',{
+          watchSlidesProgress : true,
+          watchSlidesVisibility : true,
+          loop : true,
+          observer:true,//修改swiper自己或子元素时，自动初始化swiper
+          observeParents:true,//修改swiper的父元素时，自动初始化swiper
+        });
+
     });
     
 

@@ -23,7 +23,7 @@
     }
     .touch{background-color: #ddd;}
     .img-list{
-      margin:0;
+       margin:0;
       height:3.6rem;
       overflow: hidden;
       background:url(/public/images/user/bg_logo_list.png) no-repeat;
@@ -36,7 +36,6 @@
        width:23.5%;
        height:60px;
        margin:0 2% 5% 0;
-       /*background: #fff no-repeat center;*/
        background-size: cover;
      }
      .img-list li:nth-child(4n){
@@ -61,118 +60,42 @@
 </head>
 <body class="m-regiter">
 <header class="regiter-header">
-	  <a href="javascript:history.go(-1);" class="left">
+	<a href="javascript:history.go(-1);" class="left">
     	<i class="iconfont icon-fanhui"></i>
     </a>
-    <h1>发布评论</h1>
+    <h1>业主放盘申请</h1>
 </header>
 <div class="container">
-  <div class="publish-comment">
-      <h2>琶洲广交会We+共享空间</h2>
-      <div class="publish-comment-text">
-        <img src="../public/images/orders/orders01.jpg" alt="">
-        <div class="text-r">
-          <p class="time">9月1日-9月3日 共2晚</p>
-          <p>预订人：<span>叶伟</span></p>
-          <p>订单号：186854</p>
-          <p>广州市天河区黄埔大道西108号</p>
-        </div>
-        <i class="iconfont icon-dayuhao"></i>
-      </div> 
-      <div class="grade">
-        <h3>评分：<span>（满意请给5星哦）</span></h3>
-        <div class="grade-list">
-          <div class="grade-img g6">
-            <div class="img1"></div>
-            <div class="img2"></div>
-            <div class="img3"></div>
-            <div class="img4"></div>
-            <div class="img5"></div>
-          </div>
-          <ul>
-            <li>极差</li>
-            <li>差</li>
-            <li>一般</li>
-            <li>满意</li>
-            <li>很满意</li>
-          </ul>
-        </div>
-      </div>   
-  </div>
-  <div class="words">
-      <textarea placeholder="环境如何？服务周到吗？请写下您的入住感受可以帮助需要的小伙伴哦~"></textarea>
-  </div> 
-  <div class="publish-comment-img">
-     <ul class="img-list">
-       <!-- <li class="img"></li>
-       <li class="img"></li>
-       <li class="img"></li>
-       <li class="img"></li>
-       <li class="img"></li>
-       <li class="img"></li>
-       <li class="img"></li>
-       <li class="img"></li> -->
-     </ul>
-     <input type="file" id="choose" accept="image/*" multiple>
-     <p>最多上传8张照片<a id="upload">上传照片</a></p>
-  </div>
-  <button class="publish-comment-btn">发布评论</button>
+ <div class="owner-application">
+   <p><span>所有人姓名：</span><em>叶伟</em></p>
+   <p><span>联系手机：</span><em>186858558888</em></p>
+   <p><span>房屋地址：</span><input type="text" placeholder="请输入房屋地址" /></p>
+   <p><span>房产证号</span><input type="text" placeholder="请输入房产证号" /></p>
+   <p class="info">
+     <textarea placeholder="介绍房间详情"></textarea>
+   </p>
+	 <p class="code">
+	 		<span>验证码：</span>
+	 		<input class="code-text" type="text" placeholder="请输入验证码" />
+	 		<input class="code-btn" type="button" value="获取验证码" />
+	 </p>
+ </div>
+ <div class="owner-application-up-img">
+   <ul class="img-list">
+    </ul>
+   <input type="file" id="choose" accept="image/*" multiple>
+   <p>最多上传8张照片<a id="upload">上传照片</a></p>
+ </div>
+ <button class="owner-application-btn">提交资料</button>
 </div>
-
-<!-- begin script -->
 <script src="../public/scripts/lib/jquery-1.12.2.min.js"></script>
 <script>
-   $(document).ready(function () { 
-    //publish comment
+  //publish comment
     var size=$(window).width()/10;
       $("html").css('fontSize',size);
     if($(window).width()>=640){
        $("html").css('fontSize','24px');
     }
-
-    $(".img1").on("click",function(){
-      $(this).parent().addClass("g5");
-      $(this).parent().removeClass("g6");
-      $(this).parent().removeClass("g4");
-      $(this).parent().removeClass("g3");
-      $(this).parent().removeClass("g2");
-      $(this).parent().removeClass("g1");
-    });
-    $(".img2").on("click",function(){
-      $(this).parent().addClass("g4");
-      $(this).parent().removeClass("g6");
-      $(this).parent().removeClass("g5");
-      $(this).parent().removeClass("g3");
-      $(this).parent().removeClass("g2");
-      $(this).parent().removeClass("g1");
-    });
-    $(".img3").on("click",function(){
-      $(this).parent().addClass("g3");
-      $(this).parent().removeClass("g6");
-      $(this).parent().removeClass("g5");
-      $(this).parent().removeClass("g4");
-      $(this).parent().removeClass("g2");
-      $(this).parent().removeClass("g1");
-    });
-    $(".img4").on("click",function(){
-      $(this).parent().addClass("g2");
-      $(this).parent().removeClass("g6");
-      $(this).parent().removeClass("g5");
-      $(this).parent().removeClass("g3");
-      $(this).parent().removeClass("g4");
-      $(this).parent().removeClass("g1");
-    });
-    $(".img5").on("click",function(){
-      $(this).parent().addClass("g1");
-      $(this).parent().removeClass("g6");
-      $(this).parent().removeClass("g5");
-      $(this).parent().removeClass("g3");
-      $(this).parent().removeClass("g2");
-      $(this).parent().removeClass("g4");
-    });
-
-
-   }); 
 </script>
 <script>
   var filechooser = document.getElementById("choose");

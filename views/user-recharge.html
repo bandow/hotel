@@ -20,46 +20,25 @@
 	<a href="javascript:history.go(-1);" class="left">
     	<i class="iconfont icon-fanhui"></i>
     </a>
-    <h1>我的储值</h1>
+    <h1>我要充值</h1>
 </header>
 <div class="container">
 	<div class="stored-value">
         <h3>¥10125.5</h3>
         <p>我的余额</p>
    </div> 
-   <div class="stored-value-bottom">
-   	<div class="title"><span>明细详情</span><a href="user-recharge.html">我要充值</a></div>
-   	<div class="text-list">
-   	    <div class="text-con drawback">
-   	    	<div class="text-l">
-	   	    	<p>退款</p>
-	            <p>2016-08-26 14:04</p>
-	   	    </div>
-	        <span>¥399.00</span>
-   	    </div>
-   	    <div class="text-con consume">
-   	    	<div class="text-l">
-	   	    	<p>消费</p>
-	            <p>2016-08-26 14:04</p>
-	   	    </div>
-	        <span>¥399.00</span>
-   	    </div>  
-   	    <div class="text-con drawback">
-   	    	<div class="text-l">
-	   	    	<p>退款</p>
-	            <p>2016-08-26 14:04</p>
-	   	    </div>
-	        <span>¥399.00</span>
-   	    </div>
-   	    <div class="text-con consume">
-   	    	<div class="text-l">
-	   	    	<p>消费</p>
-	            <p>2016-08-26 14:04</p>
-	   	    </div>
-	        <span>¥399.00</span>
-   	    </div>  	  	    
-   	</div>
+   <div class="recharge-title">
+    <span>充值金额：</span>
+   	<input type="text" placeholder="请输入充值金额">
    </div>
+   <p class="preferential-text">充值有优惠！</p>
+   <div class="recharge-list">
+   	  <div class="recharge-text recharge-active">充值5000送1000<i class="iconfont icon-select"></i><i class="iconfont icon-iconfontzhichi"></i></div>
+   	  <div class="recharge-text">充值10000送2500<i class="iconfont icon-select"></i><i class="iconfont icon-iconfontzhichi"></i></div>
+   	  <div class="recharge-text">充值20000送6000<i class="iconfont icon-select"></i><i class="iconfont icon-iconfontzhichi"></i></div>
+   	  <div class="recharge-text">充值50000送20000<i class="iconfont icon-select"></i><i class="iconfont icon-iconfontzhichi"></i></div>
+   </div>
+   <button class="recharge-btn">确定充值</button>
 </div>
 <script src="../public/scripts/require.js" data-main="../public/scripts/user"></script>
 </body>

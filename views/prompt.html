@@ -20,47 +20,25 @@
 	<a href="javascript:history.go(-1);" class="left">
     	<i class="iconfont icon-fanhui"></i>
     </a>
-    <h1>我的储值</h1>
+    <h1>温馨提示</h1>
 </header>
 <div class="container">
-	<div class="stored-value">
-        <h3>¥10125.5</h3>
-        <p>我的余额</p>
-   </div> 
-   <div class="stored-value-bottom">
-   	<div class="title"><span>明细详情</span><a href="user-recharge.html">我要充值</a></div>
-   	<div class="text-list">
-   	    <div class="text-con drawback">
-   	    	<div class="text-l">
-	   	    	<p>退款</p>
-	            <p>2016-08-26 14:04</p>
-	   	    </div>
-	        <span>¥399.00</span>
-   	    </div>
-   	    <div class="text-con consume">
-   	    	<div class="text-l">
-	   	    	<p>消费</p>
-	            <p>2016-08-26 14:04</p>
-	   	    </div>
-	        <span>¥399.00</span>
-   	    </div>  
-   	    <div class="text-con drawback">
-   	    	<div class="text-l">
-	   	    	<p>退款</p>
-	            <p>2016-08-26 14:04</p>
-	   	    </div>
-	        <span>¥399.00</span>
-   	    </div>
-   	    <div class="text-con consume">
-   	    	<div class="text-l">
-	   	    	<p>消费</p>
-	            <p>2016-08-26 14:04</p>
-	   	    </div>
-	        <span>¥399.00</span>
-   	    </div>  	  	    
-   	</div>
+  <!-- 支付成功 bigin -->
+   <div class="prompt-success" style="display: none;">
+     <i class="iconfont icon-xiaolian"></i>
+     <h3>支付成功</h3>
+     <p>您的订单号：103481</p>
+     <a href="">查看订单</a>
+   </div>
+  <!-- 支付失败 bigin -->
+   <div class="prompt-defeated">
+     <i class="iconfont icon-iconkulian"></i>
+     <h3>支付失败</h3>
+     <p>您的订单号：103481</p>
+     <a href="">重新支付</a>
    </div>
 </div>
+<!-- begin script -->
 <script src="../public/scripts/require.js" data-main="../public/scripts/user"></script>
 </body>
 </html>
