@@ -465,12 +465,15 @@ optgroup {
     background: #fff; }
 
 .g-areaItem {
-  position: absolute;
+  position: fixed;
   top: 13.6vh;
   right: 0;
+  height: 93.2vh;
   width: 65%;
   min-height: 100%;
-  background: #fff; }
+  background: #fff;
+  overflow: auto;
+  padding-bottom: 2.4rem; }
   .g-areaItem .g-areaItem-list {
     display: none; }
     .g-areaItem .g-areaItem-list dd {
@@ -496,7 +499,10 @@ optgroup {
       appearance: none;
       background-color: #008077;
       color: #fff;
-      width: 100%; }
+      width: 65%;
+      position: fixed;
+      right: 0;
+      bottom: 0; }
 
 .m-items {
   padding: 2%;
