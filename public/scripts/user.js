@@ -5,7 +5,7 @@ requirejs.config({
     }
 });
 
-requirejs(['jquery','common'],function($,common){  
+requirejs(['jquery','common','lib/layer'],function($,common,layer){  
 
   $(document).ready(function () {
 
@@ -63,6 +63,7 @@ requirejs(['jquery','common'],function($,common){
     $(".sweep-room-time p").on("click",function(){
        $(this).addClass("active").siblings().removeClass("active");
     });
+
 
     //must-know
     $(".must-know-text h3").on("click",function(){

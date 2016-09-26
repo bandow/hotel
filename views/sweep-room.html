@@ -14,6 +14,7 @@
 <title>MERCIbnb木西民宿</title>
 <link rel="stylesheet" href="../public/styles/user.css">
 <link rel="stylesheet" href="../public/styles/iconfont.css">
+<link rel="stylesheet" href="../public/styles/lib/layer.css">
 </head>
 <body class="m-hotel">
 <header class="regiter-header">
@@ -30,7 +31,7 @@
         <p><span>14:00-16:00</span><i class="iconfont icon-select"></i><i class="iconfont icon-iconfontzhichi"></i></p>
         <p><span>16:00-18:00</span><i class="iconfont icon-select"></i><i class="iconfont icon-iconfontzhichi"></i></p>
      </div> 
-     <div class="sweep-room-text">
+     <div id="btn" class="sweep-room-text">
        <textarea placeholder="请输入备注"></textarea>
      </div> 
      
@@ -39,5 +40,12 @@
 </div>
 <!-- begin script -->
 <script src="../public/scripts/require.js" data-main="../public/scripts/user"></script>
+<script>
+  //loading带文字
+  layer.open({
+    type: 2
+    ,content: '加载中'
+  });
+</script>
 </body>
 </html>
