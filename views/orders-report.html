@@ -12,9 +12,9 @@
 <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
 <meta name="msapplication-tap-highlight" content="no">
 <title>MERCIbnb木西民宿</title>
+<link rel="stylesheet" href="../public/styles/daterangepicker.css">
 <link rel="stylesheet" href="../public/styles/orders.css">
 <link rel="stylesheet" href="../public/styles/iconfont.css">
-<link rel="stylesheet" href="../public/styles/daterangepicker.css">
 <style>
   
   .date-picker-wrapper {
@@ -115,6 +115,15 @@
     line-height:1.5;
     font-size:12px;
   }
+  #date-range12-container .date-picker-wrapper .month-wrapper table .day.checked.first-date-selected{
+     background-color:transparent !important;
+  }
+  #date-range12-container .date-picker-wrapper .month-wrapper table .day.checked.last-date-selected{
+     background-color:transparent !important;
+  }
+  .date-picker-wrapper .month-wrapper table .day.checked{
+    background-color:transparent !important;
+  }
 </style>
 </head>
 <body class="m-hotel">
@@ -203,9 +212,9 @@
 
   var arrRoomState = [];
   $(document).ready(function () {
-      arrRoomState['2016-09-27']={day:'2016-09-27',roomrate:260,isbook:true};
-      arrRoomState['2016-09-28']={day:'2016-09-28',roomrate:250,isbook:false};
-      arrRoomState['2016-09-29']={day:'2016-09-29',roomrate:240,isbook:false};
+    arrRoomState['2016-09-27']={day:'2016-09-27',roomrate:260,isbook:true};
+    arrRoomState['2016-09-28']={day:'2016-09-28',roomrate:250,isbook:false};
+    arrRoomState['2016-09-29']={day:'2016-09-29',roomrate:240,isbook:false};
 
      
 
@@ -240,38 +249,37 @@
         //   $('#checkOutDay').html(s2);
         // },
         showDateFilter: function(time, date)   //显示价格
-        {   
-          var newTime = new Date(time).Format("yyyy-MM-dd");
-             
-          var data = arrRoomState[newTime];
-          if (data) {
-             var html='<div style="padding:2px 0;background-color:#008077;">';
-             html+='<span style="font-size:14px;color:#fff">'+date+'</span>';
-             html+='<div style="opacity:1;color:#fff">￥'+data.roomrate+'</div>';
-             html+='</div>';
-          return html;
-      }else{
-         var html='<div style="padding:2px 0;background-color:#ffa100;">';
-             html+='<span style="font-size:14px;color:#fff">'+date+'</span>';
-             html+='<div style="opacity:1;color:#fff">已租</div>';
-             html+='</div>';
-          return html;
-      }
-        
+              {   
+                var newTime = new Date(time).Format("yyyy-MM-dd");
+                   
+                var data = arrRoomState[newTime];
+                if (data) {
+                   var html='<div style="padding:2px 0;background-color:#008077;">';
+                   html+='<span style="font-size:14px;color:#fff">'+date+'</span>';
+                   html+='<div style="opacity:1;color:#fff">￥'+data.roomrate+'</div>';
+                   html+='</div>';
+                return html;
+            }else{
+               var html='<div style="padding:2px 0;background-color:#ffa100;">';
+                   html+='<span style="font-size:14px;color:#fff">'+date+'</span>';
+                   html+='<div style="opacity:1;color:#fff">已租</div>';
+                   html+='</div>';
+                return html;
+          }     
         },
-        // beforeShowDay: function(t)//禁止被选的房价
-        // {
-        //    var newTime = t.Format("yyyy-MM-dd");
-        //    var data = arrRoomState[newTime];
-        //    var valid  = false;
-        //         if (data != null && data != undefined) {
-        //            valid = data.isbook;  
-        //         }
+        beforeShowDay: function(t)//禁止被选的房价
+        {
+           var newTime = t.Format("yyyy-MM-dd");
+           var data = arrRoomState[newTime];
+           var valid  = false;
+                if (data != null && data != undefined) {
+                   valid = data.isbook;  
+                }
           
-        //   var _class = '';
-        //   var _tooltip = valid ? '' : '不能选择已定的房价';
-        //   return [valid,_class,_tooltip];
-        // },
+          var _class = '';
+          var _tooltip = valid ? '' : '不能选择已定的房价';
+          return [valid,_class,_tooltip];
+        },
         showShortcuts:false,   //去掉快捷html
         inline:false,
         singleMonth:true,  //true显示1个月，false为2个月
