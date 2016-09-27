@@ -845,68 +845,54 @@ orders-report
 		}
 	}
 }
-.profit-surface{	
-	margin-top:2%;
+.profit-bottom{
 	background-color:#fff;
-	width: 100%;
+	height: auto;
     overflow: hidden;
-    position:relative;
+    padding:2% 2% 1rem 2%;
+    margin-top: -.1rem;
     .l{
-    	content:"";
-		position: absolute;
-		width: 0;
-		height:0;
-		border-top: .2rem solid transparent;
-	    border-bottom: .2rem  solid transparent;
-	    border-right: .2rem  solid #cacaca;
-	    left:.1%;
-	    top: .4rem;
-	    z-index: 1;
-	    //@include transform(translate(0,-200%));
+    	float: right;
+    	margin-right: 1rem;
+		i{
+	   	 width:.3rem;
+	   	 height:.3rem;
+	     background-color:#008077;
+	   	 display: block;
+	   	 margin-top:.21rem;
+	   	 margin-right: .1rem;
+	   	 float: left;
+	    }
+	    span{
+		   font:.36rem/2 "Microsoft YaHei";
+		   float: left;	  	   
+		}
     }
     .r{
-    	content:"";
-		position: absolute;
-		width: 0;
-		height:0;
-		border-top: .2rem solid transparent;
-	    border-bottom: .2rem  solid transparent;
-	    border-left: .2rem  solid #cacaca;
-	    right:.1%;
-	    top: .4rem;
-	    z-index: 1;
-	    //@include transform(translate(0,-200%));
-    }
-	ul{
-		width:240vw;
-		margin-left:-60vw;
-		height: 1.2rem;
-		overflow: hidden;
-        border-bottom:1px solid #ccc;
-        transition:all .5s;
-        -webkit-transition:all .5s;
-        li{
-			font:.36rem/1.2rem "Microsoft YaHei";
-			float: left;
-			text-align: center;
-			width:20vw;
-			color:#4e4e4e;
+    	float: right;
+		i{
+	   	 width:.3rem;
+	   	 height:.3rem;
+	     background-color:#ffa100;
+	   	 display: block;
+	   	 float: left;
+	   	 margin-top:.21rem;
+	   	 margin-right: .1rem;
+	    }
+	    span{
+		   font:.36rem/2 "Microsoft YaHei";
+		   float: left;	  	   
 		}
-		.active{
-			color:#000;
-			position:relative;
-			&:before{
-               content:"";
-               width:20vw;
-               height: 2px;
-               background-color:#008077;
-               position:absolute;
-               left:0;
-               bottom:0;
-			}
+    }	
+}
+/*
+top-contacts
+*/
+.top-contacts{
+	background-color:#fff;
+	.list-info{
+		i{
+			color:#008077;
 		}
-	}
-	.profit-surface{
-		display:none;
 	}
 }

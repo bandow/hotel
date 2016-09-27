@@ -1010,60 +1010,46 @@ orders-report
         background-color: #666;
         transform: rotate(-45deg) translate(-30%, 170%); }
 
-.profit-surface {
-  margin-top: 2%;
+.profit-bottom {
   background-color: #fff;
-  width: 100%;
+  height: auto;
   overflow: hidden;
-  position: relative; }
-  .profit-surface .l {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: .2rem solid transparent;
-    border-bottom: .2rem  solid transparent;
-    border-right: .2rem  solid #cacaca;
-    left: .1%;
-    top: .4rem;
-    z-index: 1; }
-  .profit-surface .r {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: .2rem solid transparent;
-    border-bottom: .2rem  solid transparent;
-    border-left: .2rem  solid #cacaca;
-    right: .1%;
-    top: .4rem;
-    z-index: 1; }
-  .profit-surface ul {
-    width: 240vw;
-    margin-left: -60vw;
-    height: 1.2rem;
-    overflow: hidden;
-    border-bottom: 1px solid #ccc;
-    transition: all .5s;
-    -webkit-transition: all .5s; }
-    .profit-surface ul li {
-      font: .36rem/1.2rem "Microsoft YaHei";
+  padding: 2% 2% 1rem 2%;
+  margin-top: -.1rem; }
+  .profit-bottom .l {
+    float: right;
+    margin-right: 1rem; }
+    .profit-bottom .l i {
+      width: .3rem;
+      height: .3rem;
+      background-color: #008077;
+      display: block;
+      margin-top: .21rem;
+      margin-right: .1rem;
+      float: left; }
+    .profit-bottom .l span {
+      font: .36rem/2 "Microsoft YaHei";
+      float: left; }
+  .profit-bottom .r {
+    float: right; }
+    .profit-bottom .r i {
+      width: .3rem;
+      height: .3rem;
+      background-color: #ffa100;
+      display: block;
       float: left;
-      text-align: center;
-      width: 20vw;
-      color: #4e4e4e; }
-    .profit-surface ul .active {
-      color: #000;
-      position: relative; }
-      .profit-surface ul .active:before {
-        content: "";
-        width: 20vw;
-        height: 2px;
-        background-color: #008077;
-        position: absolute;
-        left: 0;
-        bottom: 0; }
-  .profit-surface .profit-surface {
-    display: none; }
+      margin-top: .21rem;
+      margin-right: .1rem; }
+    .profit-bottom .r span {
+      font: .36rem/2 "Microsoft YaHei";
+      float: left; }
+
+/*
+top-contacts
+*/
+.top-contacts {
+  background-color: #fff; }
+  .top-contacts .list-info i {
+    color: #008077; }
 
 /*# sourceMappingURL=orders.css.map */
