@@ -22,10 +22,10 @@
     <a href="#" class="left">
     	<i class="iconfont icon-fanhui"></i>
     </a>
-	<h1>家庭出游</h1>
-	<a href="#" class="right" id="click-g">
-		<i class="iconfont icon-sousuo"></i>
-	</a>
+  	<h1>家庭出游</h1>
+  	<a href="#" class="right" id="click-g">
+  		<i class="iconfont icon-sousuo"></i>
+  	</a>
 </header>
 <!-- begin container -->
 <div class="container">
@@ -86,7 +86,7 @@
 		</ul>
 		<div class="g-page-all">
 			<div class="g-page-list" style="display:block;">
-                <dl class="g-areaList">
+          <dl class="g-areaList">
 			        <dd>区域</dd>
 			        <dd class="z-active">商圈</dd>
 			        <dd>地铁</dd>
@@ -116,11 +116,11 @@
                        	<dd>北京路</dd>
                        	<dd>琶洲会展中心</dd>
                        </dl>
-                       <input type="button" value="确定">
 			    	</div>
 			    	<div class="g-areaItem-list">2</div>
 			    	<div class="g-areaItem-list">4</div>
 			    </div>
+          <button class="g-areaItem-btn">确定</button> 
 			</div>
 			<div class="g-page-list">
 				<div class="m-items m-items-t">
@@ -367,6 +367,59 @@ $(function(){
         }
     });
 });
+</script>
+<script>
+/*阻止ios拖拽到底部还能继续拖拽*/
+var ScrollFix = function(elem) {
+    // Variables to track inputs
+    var startY, startTopScroll;
+    
+    elem = elem || document.querySelector(elem);
+    
+    // If there is no element, then do nothing    
+    if(!elem)
+        return;
+
+    // Handle the start of interactions
+    elem.addEventListener('touchstart', function(event){
+        startY = event.touches[0].pageY;
+        startTopScroll = elem.scrollTop;
+        
+        if(startTopScroll <= 0)
+            elem.scrollTop = 1;
+
+        if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
+            elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+    }, false);
+};
+
+/*判断设备调用ScrollFix*/
+
+var sUserAgent=navigator.userAgent.toLowerCase();
+if(sUserAgent.match(/iphone os/i) == "iphone os"){
+    $('.g-areaItem-list').addClass('g-areaItem-list2');
+    ScrollFix($('.g-areaItem-list2')[0]); 
+}
+
+/*阻止用户双击使屏幕上滑*/
+var agent = navigator.userAgent.toLowerCase();        //检测是否是ios
+var iLastTouch = null;                                //缓存上一次tap的时间
+if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0)
+{
+    document.body.addEventListener('touchend', function(event)
+    {
+        var iNow = new Date()
+            .getTime();
+        iLastTouch = iLastTouch || iNow + 1 /** 第一次时将iLastTouch设为当前时间+1 */ ;
+        var delta = iNow - iLastTouch;
+        if (delta < 500 && delta > 0)
+        {
+            event.preventDefault();
+            return false;
+        }
+        iLastTouch = iNow;
+    }, false);
+}
 </script>
 </body>
 </html>

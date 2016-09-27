@@ -295,7 +295,8 @@ optgroup {
   color: #aaa;
   font-family: Arial,sans-serif;
   box-shadow: none;
-  box-sizing: initial; }
+  box-sizing: initial;
+  overflow-y: auto; }
 
 .date-picker-wrapper .month-wrapper table .day.lalala {
   background-color: orange; }
@@ -330,10 +331,12 @@ optgroup {
   cursor: default;
   position: absolute;
   bottom: 0;
-  height: 60vh;
-  overflow: auto;
-  _overflow: hidden;
-  padding-top: 5vh; }
+  height: 60%;
+  overflow-y: auto;
+  padding-top: 5%; }
+
+.date-picker-wrapper .month-wrapper2 {
+  -webkit-overflow-scrolling: touch; }
 
 .date-picker-wrapper .month-wrapper table th, .date-picker-wrapper .month-wrapper table td {
   width: 14.2857143%;

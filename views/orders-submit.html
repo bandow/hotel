@@ -14,6 +14,107 @@
 <title>MERCIbnb木西民宿</title>
 <link rel="stylesheet" href="../public/styles/orders.css">
 <link rel="stylesheet" href="../public/styles/iconfont.css">
+<link rel="stylesheet" href="../public/styles/daterangepicker.css">
+<style>
+    
+  .date-picker-wrapper {
+      position: absolute;
+      z-index: 1;
+      border: none;
+      background-color: #fff;
+      padding: 0;
+      font-size: 12px;
+      line-height: 20px;
+      color: #aaa;
+      font-family: Arial,sans-serif;
+      box-shadow: none;
+      box-sizing: initial;
+      overflow-y:auto;
+  }
+  .date-picker-wrapper .month-wrapper table .day.lalala { background-color:orange; }
+  .options { display:none; border-left:6px solid #8ae; padding:10px; font-size:12px; line-height:1.4; background-color:#eee; border-radius:4px;}
+  .date-picker-wrapper.date-range-picker19 .day.first-date-selected { background-color: red !important; }
+  .date-picker-wrapper.date-range-picker19 .day.last-date-selected { background-color: orange !important; }
+  .date-picker-wrapper .month-wrapper table{width:100% !important;border-top: 1px solid #f2f2f2;}
+  .date-picker-wrapper.no-shortcuts {
+      padding-bottom: 0;
+  }
+  .date-picker-wrapper .month-wrapper {
+      border: none;
+      border-radius: 0;
+      background-color: #fff;
+      padding: 0;
+      cursor: default;
+      position: absolute;
+      bottom:0;
+      height: 60%;
+      overflow-y: auto;
+      padding-top: 5%;
+  }
+  .date-picker-wrapper .month-wrapper2 {
+       -webkit-overflow-scrolling : touch; 
+  }
+  .date-picker-wrapper .month-wrapper table th, .date-picker-wrapper .month-wrapper table td{
+    width: 14.2857143%;
+    padding:.5% 1%;
+    -webkit-box-sizing: border-box; /*Safari3.2+*/
+      box-sizing: border-box;
+  }
+  .date-picker-wrapper .drp_top-bar {
+      position: absolute;
+      padding: 0;
+      left: 0;
+      width: 100%;
+      top: 32vh;
+      height: 8vh;
+      background: #f2f2f2;
+      line-height: 8vh;
+  }
+  .date-picker-wrapper .drp_top-bar .apply-btn.disabled,.date-picker-wrapper .drp_top-bar .apply-btn{
+    border: 0;
+      background: none;
+      display: block;
+      height: 8vh;
+      top: 0;
+      right: 20px;
+      color:#333;
+  }
+  .date-picker-wrapper .month-name{    
+    color: #000;
+      font-size: 14px;
+  }
+  .date-picker-wrapper .drp_top-bar .default-top,.date-picker-wrapper .drp_top-bar.normal .normal-top{
+      text-align: center;
+      color: #333;
+      font-weight: bold;
+  }
+  .date-picker-wrapper .selected-days {
+      font-weight: bold;
+      font-size: 14px;
+      font-style: normal;
+  }
+  .date-picker-wrapper .month-wrapper table .week-name {
+      height: 50px;
+      line-height: 50px;
+  }
+  .date-picker-wrapper table .caption {
+      height: 50px;
+  }
+  .date-picker-wrapper .month-wrapper table .day.checked{
+    background-color: #008077;    
+  }
+  .date-picker-wrapper .month-wrapper table .day.toMonth.valid.checked {
+      color: #fff;
+      cursor: pointer;
+  }
+  .date-picker-wrapper .month-wrapper table .day.real-today{
+    background-color:transparent;
+  }
+  .date-picker-wrapper .month-wrapper table .day{
+    line-height: 30px;
+    font-size:14px;
+  }
+</style>
 </head>
 <body class="m-hotel">
 <!-- begin header -->
@@ -37,14 +138,14 @@
 	        <p class="address">广州市天河区天河北路278号岗顶大厦1008（地铁岗顶C出口）</p>
   	  	</div>
     </section>
-    <section class="orders-time">
+    <section class="orders-time" id="date">
 	  	<div class="left">
 	  		<i class="iconfont icon-rili"></i>
-	  		<p><span>9月1日</span> 14:00入住</p>
+	  		<p><span id="checkInDay">9月1日</span> 14:00入住</p>
 	  	</div>
 	  	<div class="right">
 	  		<i class="iconfont icon-rili"></i>
-	  		<p><span>9月3日</span> 12:00离开</p>
+	  		<p><span id="checkOutDay">9月3日</span> 12:00离开</p>
 	  	</div>
     </section>
     <section class="orders-name">
@@ -161,7 +262,10 @@
 <!-- begin script -->
 <!-- <script src="../public/scripts/require.js" data-main="../public/scripts/orders"></script> -->
 
-<script src="../public/scripts/lib/jquery.min.js" ></script>
+<!-- <script src="../public/scripts/lib/jquery.min.js" ></script> -->
+<script src="../public/scripts/lib/jquery-1.12.2.min.js" ></script>
+<script src="../public/scripts/lib/moment.min.js" ></script>
+<script src="../public/scripts/lib/jquery.daterangepicker.js" ></script>
 <script src="../public/scripts/lib/jquery.uploadView.js"></script>
 <script>
   //设置字体响应式
@@ -183,7 +287,8 @@
         $(".order-check-in").hide();
     });
     $(".list-info").on("click",function(){
-        $(this).addClass("list-info-active").siblings().removeClass("list-info-active");
+        // $(this).addClass("list-info-active").siblings().removeClass("list-info-active");
+        $(this).toggleClass("list-info-active");
     });
     $(".head-click").on("click",function(){
         $(".add-order-check-in").show();
@@ -226,7 +331,159 @@
   
   });   
 </script>
+<script>
+       Date.prototype.Format = function (fmt) { //author: meizz  
+            var o = {  
+                "M+": this.getMonth() + 1, //月份  
+                "d+": this.getDate(), //日  
+                "h+": this.getHours(), //小时  
+                "m+": this.getMinutes(), //分  
+                "s+": this.getSeconds(), //秒  
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度  
+                "S": this.getMilliseconds() //毫秒  
+            };  
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));  
+            for (var k in o)  
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));  
+            return fmt;  
+        }; 
 
+var arrRoomState = [];
+	 $(document).ready(function () {
+	 	arrRoomState['2016-09-27']={day:'2016-09-27',roomrate:260,isbook:true};
+arrRoomState['2016-09-28']={day:'2016-09-28',roomrate:250,isbook:false};
+arrRoomState['2016-09-29']={day:'2016-09-29',roomrate:240,isbook:false};
+
+	 
+
+    var myDate = new Date();
+    var m=myDate.getMonth()+1;
+    var day=myDate.getDate();
+    var hDay=myDate.getDate()+1;
+    
+    //初始化当天时间
+    $(".check-in-day").html(m+"-"+day);
+    $(".check-out-day").html(m+"-"+hDay);
+
+    //初始化1晚
+    var num=$("#checkInDay").html()-$("#checkOutDay").html();
+    $("#num").html(num);
+    $("#num").html("1");
+    
+
+    $('#date').dateRangePicker(
+      {
+        startDate: new Date(),  //默认今天开始
+        getValue: function()    //选择开始和结束的日期
+        {
+          if ($('#checkInDay').html() && $('#checkOutDay').html() )
+            return $('#checkInDay').html() + ' to ' + $('#checkOutDay').html();
+          else
+            return '';
+        },
+        setValue: function(s,s1,s2)  //回调页面上
+        {
+          $('#checkInDay').html(s1);
+          $('#checkOutDay').html(s2);
+        },
+        showDateFilter: function(time, date)   //显示价格
+        {   
+        	var newTime = new Date(time).Format("yyyy-MM-dd");
+             
+        	var data = arrRoomState[newTime];
+        	if (data) {
+        		 var html='<div style="padding:0 5px;">';
+             html+='<span style="font-size:14px;">'+date+'</span>';
+             html+='<div style="opacity:1;">￥'+data.roomrate+'</div>';
+             html+='</div>';
+          return html;
+      }else{
+      	 var html='<div style="padding:0 5px;">';
+             html+='<span style="font-size:14px;">'+date+'</span>';
+             html+='<div style="opacity:1;">已租</div>';
+             html+='</div>';
+          return html;
+      }
+        
+        },
+        beforeShowDay: function(t)//禁止被选的房价
+		{
+		   var newTime = t.Format("yyyy-MM-dd");
+		   var data = arrRoomState[newTime];
+		   var valid  = false;
+            if (data != null && data != undefined) {
+            	 valid = data.isbook;  
+            }
+			
+			var _class = '';
+			var _tooltip = valid ? '' : '不能选择已定的房价';
+			return [valid,_class,_tooltip];
+		},
+        showShortcuts:false,   //去掉快捷html
+        inline:false,
+        singleMonth:false,  //true显示1个月，false为2个月
+        batchMode:true,
+        stickyMonths:true, //如果是true，只会有一个以前和一个下一个按钮。点击他们将改变两个月。
+        // extraClass:'dengcb',  //添加class
+        showTopbar:true,     //true显示确定按钮 false不显示确定按钮选择好就确定
+        selectForward:false,   //true选择开始的时间前面就不能选，默认false
+        selectBackward:false,  //true只能选择1天     
+      })
+  });  
+
+  
+  /*阻止ios拖拽到底部还能继续拖拽*/
+var ScrollFix = function(elem) {
+    // Variables to track inputs
+    var startY, startTopScroll;
+    
+    elem = elem || document.querySelector(elem);
+    
+    // If there is no element, then do nothing    
+    if(!elem)
+        return;
+
+    // Handle the start of interactions
+    elem.addEventListener('touchstart', function(event){
+        startY = event.touches[0].pageY;
+        startTopScroll = elem.scrollTop;
+        
+        if(startTopScroll <= 0)
+            elem.scrollTop = 1;
+
+        if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
+            elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+    }, false);
+};
+
+/*判断设备调用ScrollFix*/
+
+var sUserAgent=navigator.userAgent.toLowerCase();
+if(sUserAgent.match(/iphone os/i) == "iphone os"){
+    $('.month-wrapper').addClass('month-wrapper2');
+    ScrollFix($('.month-wrapper2')[0]); 
+}
+
+/*阻止用户双击使屏幕上滑*/
+var agent = navigator.userAgent.toLowerCase();        //检测是否是ios
+var iLastTouch = null;                                //缓存上一次tap的时间
+if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0)
+{
+    document.body.addEventListener('touchend', function(event)
+    {
+        var iNow = new Date()
+            .getTime();
+        iLastTouch = iLastTouch || iNow + 1 /** 第一次时将iLastTouch设为当前时间+1 */ ;
+        var delta = iNow - iLastTouch;
+        if (delta < 500 && delta > 0)
+        {
+            event.preventDefault();
+            return false;
+        }
+        iLastTouch = iNow;
+    }, false);
+}
+</script>
 
 </body>
 </html>

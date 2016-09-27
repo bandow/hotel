@@ -108,6 +108,7 @@
     font-family: Arial,sans-serif;
     box-shadow: none;
     box-sizing: initial;
+    overflow-y:auto;
 }
 .date-picker-wrapper .month-wrapper table .day.lalala { background-color:orange; }
 .options { display:none; border-left:6px solid #8ae; padding:10px; font-size:12px; line-height:1.4; background-color:#eee; border-radius:4px;}
@@ -125,10 +126,12 @@
     cursor: default;
     position: absolute;
     bottom:0;
-    height: 60vh;
-    overflow: auto;
-    _overflow: hidden;
-    padding-top: 5vh;
+    height: 60%;
+    overflow-y: auto;
+    padding-top: 5%;
+}
+.date-picker-wrapper .month-wrapper2 {
+     -webkit-overflow-scrolling : touch; 
 }
 .date-picker-wrapper .month-wrapper table th, .date-picker-wrapper .month-wrapper table td{
 	width: 14.2857143%;
