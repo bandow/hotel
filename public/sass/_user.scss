@@ -1595,6 +1595,65 @@ continued
 	left:0;
 	bottom:0;
 }
+.layer{
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+	width:100%;
+	height:100%;
+	position: absolute;
+    top: 0;
+    -webkit-tranition:all .2s;
+    transition:all .2s;
+}
+.continued-layer{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background:rgba(0,0,0,.8);
+}
+.continued-layer-coupon-list{
+	position:absolute;
+	top:20%;
+	left:0;
+	right:0;
+	bottom:0;
+	height:80%;
+	background:rgba(255,255,255,1);
+    overflow: auto;
+    .card-coupons{
+    	padding-bottom:1.2rem;
+    	.card-coupons-list{
+    		position:relative;
+    	}
+    	.card-btn{
+    		position:fixed;
+    		left:0;
+    		bottom:0;
+    		width:100%;
+    		outline:none;
+    		border:none;
+    		font:.36rem/1rem "Microsoft YaHei";
+    		background-color:#008077;
+    		color:#fff;
+    		text-align:center;
+    	}
+    	i{
+    		position:absolute;
+    		top: 3%;
+		    right: 10%;
+		    color: #008070;
+		    font-size: 1rem;
+    	}
+    }
+}
+.layer-active{
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	width:100%;
+	height:100%;
+}
 /*
 sweep room
 */

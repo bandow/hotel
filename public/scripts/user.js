@@ -58,6 +58,23 @@ requirejs(['jquery','common','lib/layer'],function($,common,layer){
     $(".pay p").on("click",function(){
        $(this).addClass("active").siblings().removeClass("active");
     });
+    $(".coupon").on("click",function(){
+      $(".layer").addClass("layer-active");
+    });
+    $(".continued-layer").on("click",function(){
+         $(".layer").removeClass("layer-active");
+    });
+    $(".card-coupons-list").on("click",function(){
+      $(this).addClass("active").siblings().removeClass("active");
+      if($(this).find("i").length>=1){
+        return false;
+      }else{
+        $(this).append("<i class='iconfont icon-dagou'></i>").siblings().find("i").remove();
+      }   
+    });
+    $(".card-btn").on("click",function(){
+         $(".layer").removeClass("layer-active");
+    });
 
     //sweep-room
     $(".sweep-room-time p").on("click",function(){
