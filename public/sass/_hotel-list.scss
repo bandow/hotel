@@ -135,6 +135,21 @@
 	    z-index: 1;
 	}
 }
+#scroll{
+	position:fixed;
+	right:5%;
+	bottom:5%;
+	width:.8rem;
+	height:.8rem;
+	background:rgba(0,0,0,.5);
+	border-radius:5px;
+	i{
+		text-align: center;
+	    line-height: .8rem;
+	    display: block;
+	    color: #ccc;
+	}
+}
 
 /*g-page*/
 .g-page{

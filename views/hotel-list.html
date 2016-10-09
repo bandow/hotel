@@ -169,257 +169,276 @@
 		</div>
 	</div>
 </div>
+<div id="scroll">
+  <i class="iconfont icon-zhiding"></i>
+</div>
 <!-- begin script -->
 <!-- <script src="../public/scripts/require.js" data-main="../public/scripts/hotel-list"></script> -->
 <script src="../public/scripts/lib/zepto.min.js"></script>
 <script src="../public/scripts/lib/dropload.min.js"></script>
 <script>
-$(document).ready(function () {
+  $(document).ready(function () {
 
-       var size=$(window).width()/10;
-        $("html").css('fontSize',size);
-        if($(window).width()>=640){
-           $("html").css('fontSize','24px');
-        }
+         var size=$(window).width()/10;
+          $("html").css('fontSize',size);
+          if($(window).width()>=640){
+             $("html").css('fontSize','24px');
+          }
 
-        $("#click-g").on("click",function(){
-            $(".g-page").show();
-            $(".container").hide();
-            $(".public-header").hide();
-        });
+          $("#click-g").on("click",function(){
+              $(".g-page").show();
+              $(".container").hide();
+              $(".public-header").hide();
+          });
 
-        $(".search-header .left").on("click",function(){
-             $(".g-page").hide();
-              $(".container").show();
-            $(".public-header").show();
-        });
+          $(".search-header .left").on("click",function(){
+               $(".g-page").hide();
+                $(".container").show();
+              $(".public-header").show();
+          });
 
-        $(".page-ul-list li").on("click",function(){
-           $(this).addClass("active").siblings().removeClass("active");
-           $(".g-page-all .g-page-list").eq($(this).index()).show().siblings().hide();
-        });
+          $(".page-ul-list li").on("click",function(){
+             $(this).addClass("active").siblings().removeClass("active");
+             $(".g-page-all .g-page-list").eq($(this).index()).show().siblings().hide();
+          });
 
-        $(".g-areaList dd").on("click",function(){
-           $(this).addClass("z-active").siblings().removeClass("z-active");
-           $(".g-areaItem .g-areaItem-list").eq($(this).index()).show().siblings().hide();
-        });
+          $(".g-areaList dd").on("click",function(){
+             $(this).addClass("z-active").siblings().removeClass("z-active");
+             $(".g-areaItem .g-areaItem-list").eq($(this).index()).show().siblings().hide();
+          });
 
-        $(".g-areaItem-list dl dd").on("click",function(){
-            $(this).addClass("l-active").siblings().removeClass("l-active");
-            if($(this).find("i").size()>=1){
-                return false;
-            }else{   
-                $(this).append("<i class='iconfont icon-dagou'></i>").siblings().find("i").remove();
-            }
-        });
+          $(".g-areaItem-list dl dd").on("click",function(){
+              $(this).addClass("l-active").siblings().removeClass("l-active");
+              if($(this).find("i").size()>=1){
+                  return false;
+              }else{   
+                  $(this).append("<i class='iconfont icon-dagou'></i>").siblings().find("i").remove();
+              }
+          });
 
-       
-        (function() {
-            var lineUl=document.getElementById("line-ul");
-            var lineLi=lineUl.getElementsByTagName("li");   
-            var empty=document.getElementById("empty");     
-            var f = document.forms[0],
-                range = f['range'],
-                // result = f['result'],
-                cachedRangeValue = localStorage.rangeValue ? localStorage.rangeValue : 0; 
+          (function() {
+              var lineUl=document.getElementById("line-ul");
+              var lineLi=lineUl.getElementsByTagName("li");   
+              var empty=document.getElementById("empty");     
+              var f = document.forms[0],
+                  range = f['range'],
+                  // result = f['result'],
+                  cachedRangeValue = localStorage.rangeValue ? localStorage.rangeValue : 0; 
 
-            // 检测浏览器是否是足够酷
-            // 识别range input.
-            var o = document.createElement('input');
-            o.type = 'range';
-            if ( o.type === 'text' ) alert('不好意思，你的浏览器还不够酷，试试最新的Opera浏览器吧。');
+              // 检测浏览器是否是足够酷
+              // 识别range input.
+              var o = document.createElement('input');
+              o.type = 'range';
+              if ( o.type === 'text' ) alert('不好意思，你的浏览器还不够酷，试试最新的Opera浏览器吧。');
 
-            // 设置初始值
-            // 无论是否本地存储了，都设置值为0
-            range.value = cachedRangeValue;
-            // result.value = cachedRangeValue;
+              // 设置初始值
+              // 无论是否本地存储了，都设置值为0
+              range.value = cachedRangeValue;
+              // result.value = cachedRangeValue;
 
-            // 当用户选择了个值，更新本地存储
-            range.addEventListener("mouseup", function() {
-                console.log("你选择的值是：" + range.value + ". 我现在正在用本地存储保存此值。在现代浏览器上刷新并检测。");
-                localStorage ? (localStorage.rangeValue = range.value) : alert("数据保存到了数据库或是其他什么地方。");
+              // 当用户选择了个值，更新本地存储
+              range.addEventListener("mouseup", function() {
+                  console.log("你选择的值是：" + range.value + ". 我现在正在用本地存储保存此值。在现代浏览器上刷新并检测。");
+                  localStorage ? (localStorage.rangeValue = range.value) : alert("数据保存到了数据库或是其他什么地方。");
 
-            }, false);
+              }, false);
 
-            // 滑动时显示选择的值
-            range.addEventListener("change", function() {
-                // result.value = range.value;
-                if(range.value==0){
-                   lineLi[0].className="line-active"; 
-                   lineLi[1].className="";
-                   lineLi[2].className="";
-                   lineLi[3].className="";
-                   lineLi[4].className="";
-                   lineLi[5].className="";
-                }
-                if(range.value==1){  
+              // 滑动时显示选择的值
+              range.addEventListener("change", function() {
+                  // result.value = range.value;
+                  if(range.value==0){
+                     lineLi[0].className="line-active"; 
+                     lineLi[1].className="";
+                     lineLi[2].className="";
+                     lineLi[3].className="";
+                     lineLi[4].className="";
+                     lineLi[5].className="";
+                  }
+                  if(range.value==1){  
+                    lineLi[0].className="line-active";                               
+                    lineLi[1].className="line-active";
+                    lineLi[2].className="";
+                     lineLi[3].className="";
+                     lineLi[4].className="";
+                     lineLi[5].className="";
+                  }
+                  if(range.value==2){  
+                    lineLi[0].className="line-active";                               
+                    lineLi[1].className="line-active";                              
+                    lineLi[2].className="line-active";
+                    lineLi[3].className="";
+                     lineLi[4].className="";
+                     lineLi[5].className="";
+                  }
+                  if(range.value==3){    
                   lineLi[0].className="line-active";                               
-                  lineLi[1].className="line-active";
-                  lineLi[2].className="";
-                   lineLi[3].className="";
-                   lineLi[4].className="";
-                   lineLi[5].className="";
-                }
-                if(range.value==2){  
+                    lineLi[1].className="line-active";                              
+                    lineLi[2].className="line-active";                            
+                    lineLi[3].className="line-active";
+                     lineLi[4].className="";
+                     lineLi[5].className="";
+                  }
+                  if(range.value==4){   
                   lineLi[0].className="line-active";                               
-                  lineLi[1].className="line-active";                              
-                  lineLi[2].className="line-active";
-                  lineLi[3].className="";
-                   lineLi[4].className="";
-                   lineLi[5].className="";
-                }
-                if(range.value==3){    
-                lineLi[0].className="line-active";                               
-                  lineLi[1].className="line-active";                              
-                  lineLi[2].className="line-active";                            
-                  lineLi[3].className="line-active";
-                   lineLi[4].className="";
-                   lineLi[5].className="";
-                }
-                if(range.value==4){   
-                lineLi[0].className="line-active";                               
-                  lineLi[1].className="line-active";                              
-                  lineLi[2].className="line-active";                            
-                  lineLi[3].className="line-active";                             
-                  lineLi[4].className="line-active";
-                  lineLi[5].className="";
-                }
-                if(range.value==5){   
-                  lineLi[0].className="line-active";                               
-                  lineLi[1].className="line-active";                              
-                  lineLi[2].className="line-active";                            
-                  lineLi[3].className="line-active";                             
-                  lineLi[4].className="line-active";                             
-                  lineLi[5].className="line-active";
-                }
-            }, false);
+                    lineLi[1].className="line-active";                              
+                    lineLi[2].className="line-active";                            
+                    lineLi[3].className="line-active";                             
+                    lineLi[4].className="line-active";
+                    lineLi[5].className="";
+                  }
+                  if(range.value==5){   
+                    lineLi[0].className="line-active";                               
+                    lineLi[1].className="line-active";                              
+                    lineLi[2].className="line-active";                            
+                    lineLi[3].className="line-active";                             
+                    lineLi[4].className="line-active";                             
+                    lineLi[5].className="line-active";
+                  }
+              }, false);
 
-            //
-            empty.onclick=function(){
-                range.value = cachedRangeValue;
-                lineLi[0].className="line-active"; 
-               lineLi[1].className="";
-               lineLi[2].className="";
-               lineLi[3].className="";
-               lineLi[4].className="";
-               lineLi[5].className="";
-            }
-        })();
+              //
+              empty.onclick=function(){
+                  range.value = cachedRangeValue;
+                  lineLi[0].className="line-active"; 
+                 lineLi[1].className="";
+                 lineLi[2].className="";
+                 lineLi[3].className="";
+                 lineLi[4].className="";
+                 lineLi[5].className="";
+              }
+          })();
 
-        $("#empty").on("click",function(){
-            $(".m-items li").removeClass("active");
-        });
+          $("#empty").on("click",function(){
+              $(".m-items li").removeClass("active");
+          });
 
-        $(".m-ul-c li").on("click",function(){
-           $(this).addClass("active").siblings().removeClass("active");
-        });
-        $(".m-ul-b li").on("click",function(){
-           $(this).addClass("active").siblings().removeClass("active");
-        });
-});
-$(function(){
-    var counter = 0;
-    // 每页展示4个
-    var num = 4;
-    var pageStart = 0,pageEnd = 0;
+          $(".m-ul-c li").on("click",function(){
+             $(this).addClass("active").siblings().removeClass("active");
+          });
+          $(".m-ul-b li").on("click",function(){
+             $(this).addClass("active").siblings().removeClass("active");
+          });
+  });
+  $(function(){
+      var counter = 0;
+      // 每页展示4个
+      var num = 4;
+      var pageStart = 0,pageEnd = 0;
 
-    // dropload
-    $('.container').dropload({
-        scrollArea : window,
-        loadDownFn : function(me){
-            $.ajax({
-                type: 'GET',
-                url: '../public/scripts/json/more.json',
-                dataType: 'json',
-                success: function(data){
-                    var result = '';
-                    counter++;
-                    pageEnd = num * counter;
-                    pageStart = pageEnd - num;
+      // dropload
+      $('.container').dropload({
+          scrollArea : window,
+          loadDownFn : function(me){
+              $.ajax({
+                  type: 'GET',
+                  url: '../public/scripts/json/more.json',
+                  dataType: 'json',
+                  success: function(data){
+                      var result = '';
+                      counter++;
+                      pageEnd = num * counter;
+                      pageStart = pageEnd - num;
 
-                    for(var i = pageStart; i < pageEnd; i++){
-                        result +=   '<a class="item opacity" href="'+data.lists[i].link+'">'
-                                        +'<img src="'+data.lists[i].pic+'" alt="">'
-                                        +'<h3>'+data.lists[i].title+'</h3>'
-                                        +'<span class="date">'+data.lists[i].date+'</span>'
-                                    +'</a>';
-                        if((i + 1) >= data.lists.length){
-                            // 锁定
-                            me.lock();
-                            // 无数据
-                            me.noData();
-                            break;
-                        }
-                    }
-                    // 为了测试，延迟1秒加载
-                    setTimeout(function(){
-                        $('.lists').append(result);
-                        // 每次数据加载完，必须重置
-                        me.resetload();
-                    },1000);
-                },
-                error: function(xhr, type){
-                    alert('Ajax error!');
-                    // 即使加载出错，也得重置
-                    me.resetload();
-                }
-            });
-        }
-    });
-});
+                      for(var i = pageStart; i < pageEnd; i++){
+                          result +=   '<a class="item opacity" href="'+data.lists[i].link+'">'
+                                          +'<img src="'+data.lists[i].pic+'" alt="">'
+                                          +'<h3>'+data.lists[i].title+'</h3>'
+                                          +'<span class="date">'+data.lists[i].date+'</span>'
+                                      +'</a>';
+                          if((i + 1) >= data.lists.length){
+                              // 锁定
+                              me.lock();
+                              // 无数据
+                              me.noData();
+                              break;
+                          }
+                      }
+                      // 为了测试，延迟1秒加载
+                      setTimeout(function(){
+                          $('.lists').append(result);
+                          // 每次数据加载完，必须重置
+                          me.resetload();
+                      },1000);
+                  },
+                  error: function(xhr, type){
+                      alert('Ajax error!');
+                      // 即使加载出错，也得重置
+                      me.resetload();
+                  }
+              });
+          }
+      });
+  });
 </script>
 <script>
-/*阻止ios拖拽到底部还能继续拖拽*/
-var ScrollFix = function(elem) {
-    // Variables to track inputs
-    var startY, startTopScroll;
-    
-    elem = elem || document.querySelector(elem);
-    
-    // If there is no element, then do nothing    
-    if(!elem)
-        return;
-
-    // Handle the start of interactions
-    elem.addEventListener('touchstart', function(event){
-        startY = event.touches[0].pageY;
-        startTopScroll = elem.scrollTop;
+  /*阻止ios拖拽到底部还能继续拖拽*/
+  var ScrollFix = function(elem) {
+        // Variables to track inputs
+        var startY, startTopScroll;
         
-        if(startTopScroll <= 0)
-            elem.scrollTop = 1;
+        elem = elem || document.querySelector(elem);
+        
+        // If there is no element, then do nothing    
+        if(!elem)
+            return;
 
-        if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
-            elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
-    }, false);
-};
+        // Handle the start of interactions
+        elem.addEventListener('touchstart', function(event){
+            startY = event.touches[0].pageY;
+            startTopScroll = elem.scrollTop;
+            
+          if(startTopScroll <= 0)
+              elem.scrollTop = 1;
 
-/*判断设备调用ScrollFix*/
+          if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
+              elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+      }, false);
+  };
 
-var sUserAgent=navigator.userAgent.toLowerCase();
-if(sUserAgent.match(/iphone os/i) == "iphone os"){
-    $('.g-areaItem-list').addClass('g-areaItem-list2');
-    ScrollFix($('.g-areaItem-list2')[0]); 
-}
+  /*判断设备调用ScrollFix*/
 
-/*阻止用户双击使屏幕上滑*/
-var agent = navigator.userAgent.toLowerCase();        //检测是否是ios
-var iLastTouch = null;                                //缓存上一次tap的时间
-if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0)
-{
-    document.body.addEventListener('touchend', function(event)
-    {
-        var iNow = new Date()
-            .getTime();
-        iLastTouch = iLastTouch || iNow + 1 /** 第一次时将iLastTouch设为当前时间+1 */ ;
-        var delta = iNow - iLastTouch;
-        if (delta < 500 && delta > 0)
-        {
-            event.preventDefault();
-            return false;
-        }
-        iLastTouch = iNow;
-    }, false);
-}
+  var sUserAgent=navigator.userAgent.toLowerCase();
+  if(sUserAgent.match(/iphone os/i) == "iphone os"){
+      $('.g-areaItem-list').addClass('g-areaItem-list2');
+      ScrollFix($('.g-areaItem-list2')[0]); 
+  }
+
+  /*阻止用户双击使屏幕上滑*/
+  var agent = navigator.userAgent.toLowerCase();        //检测是否是ios
+  var iLastTouch = null;                                //缓存上一次tap的时间
+  if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0)
+  {
+      document.body.addEventListener('touchend', function(event)
+      {
+          var iNow = new Date()
+              .getTime();
+          iLastTouch = iLastTouch || iNow + 1 /** 第一次时将iLastTouch设为当前时间+1 */ ;
+          var delta = iNow - iLastTouch;
+          if (delta < 500 && delta > 0)
+          {
+              event.preventDefault();
+              return false;
+          }
+          iLastTouch = iNow;
+      }, false);
+  }
+</script>
+<script>
+  // 获取置顶对象
+  var obj = document.getElementById('scroll');
+  // 置顶对象点击事件
+  obj.onclick = function() {
+    var timer = setInterval(function() {
+      window.scrollBy(0, -50);
+      if (document.body.scrollTop == 0) {
+        clearInterval(timer);
+      };
+    }, 2);
+  }
+  // 窗口滚动检测
+  window.onscroll = function() {
+    obj.style.display = (document.body.scrollTop >= 300) ? "block" : "none";
+  }
 </script>
 </body>
 </html>
