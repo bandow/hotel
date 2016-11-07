@@ -349,14 +349,30 @@
   }; 
 
   var arrRoomState = [];
-  	 $(document).ready(function () {
-  	 	arrRoomState['2016-09-27']={day:'2016-09-27',roomrate:260,isbook:true};
-  arrRoomState['2016-09-28']={day:'2016-09-28',roomrate:250,isbook:false};
-  arrRoomState['2016-09-29']={day:'2016-09-29',roomrate:240,isbook:false};
+  $(document).ready(function () {
+    arrRoomState['2016-10-09']={day:'2016-10-09',roomrate:260,isbook:true};
+    arrRoomState['2016-10-10']={day:'2016-10-10',roomrate:260,isbook:true};
+    arrRoomState['2016-10-11']={day:'2016-10-11',roomrate:260,isbook:true};
+    arrRoomState['2016-10-12']={day:'2016-10-12',roomrate:260,isbook:true};
+    arrRoomState['2016-10-13']={day:'2016-10-13',roomrate:260,isbook:true};
+    arrRoomState['2016-10-14']={day:'2016-10-14',roomrate:260,isbook:false};
+    arrRoomState['2016-10-15']={day:'2016-10-15',roomrate:260,isbook:true};
+    arrRoomState['2016-10-16']={day:'2016-10-16',roomrate:260,isbook:true};
+    arrRoomState['2016-10-17']={day:'2016-10-17',roomrate:260,isbook:true};
+    arrRoomState['2016-10-18']={day:'2016-10-18',roomrate:260,isbook:true};
+    arrRoomState['2016-10-19']={day:'2016-10-19',roomrate:260,isbook:true};
+    arrRoomState['2016-10-20']={day:'2016-10-20',roomrate:260,isbook:true};
+    arrRoomState['2016-10-21']={day:'2016-10-21',roomrate:260,isbook:false};
+    arrRoomState['2016-10-22']={day:'2016-10-22',roomrate:260,isbook:true};
+    arrRoomState['2016-10-23']={day:'2016-10-23',roomrate:260,isbook:true};
+    arrRoomState['2016-10-24']={day:'2016-10-24',roomrate:260,isbook:true};
+    arrRoomState['2016-10-25']={day:'2016-10-25',roomrate:260,isbook:true};
+    arrRoomState['2016-10-26']={day:'2016-10-26',roomrate:260,isbook:true};
+  	arrRoomState['2016-10-27']={day:'2016-10-27',roomrate:260,isbook:true};
+    arrRoomState['2016-10-28']={day:'2016-10-28',roomrate:250,isbook:false};
+    arrRoomState['2016-10-29']={day:'2016-10-29',roomrate:240,isbook:false};
 
-  	 
-
-      var myDate = new Date();
+    var myDate = new Date();
     var m=myDate.getMonth()+1;
     var day=myDate.getDate();
     var hDay=myDate.getDate()+1;
@@ -371,64 +387,56 @@
     $("#num").html("1");
     
 
-    $('#date').dateRangePicker(
-      {
-        startDate: new Date(),  //默认今天开始
-        getValue: function()    //选择开始和结束的日期
-        {
-          if ($('#checkInDay').html() && $('#checkOutDay').html() )
-            return $('#checkInDay').html() + ' to ' + $('#checkOutDay').html();
-          else
-            return '';
-        },
-        setValue: function(s,s1,s2)  //回调页面上
-        {
-          $('#checkInDay').html(s1);
-          $('#checkOutDay').html(s2);
-        },
-        showDateFilter: function(time, date)   //显示价格
-        {   
-        	var newTime = new Date(time).Format("yyyy-MM-dd");
-             
-        	var data = arrRoomState[newTime];
-        	if (data) {
-        		 var html='<div style="padding:0;">';
-             html+='<span style="font-size:14px;">'+date+'</span>';
-             html+='<div style="opacity:1;">￥'+data.roomrate+'</div>';
-             html+='</div>';
+    $('#date').dateRangePicker({
+      startDate: new Date(),  //默认今天开始
+      getValue: function(){   //选择开始和结束的日期      
+        if ($('#checkInDay').html() && $('#checkOutDay').html() )
+          return $('#checkInDay').html() + ' to ' + $('#checkOutDay').html();
+        else
+          return '';
+      },
+      setValue: function(s,s1,s2){  //回调页面上
+        $('#checkInDay').html(s1);
+        $('#checkOutDay').html(s2);
+      },
+      showDateFilter: function(time, date){   //显示价格          
+      	var newTime = new Date(time).Format("yyyy-MM-dd");            
+      	var data = arrRoomState[newTime];
+      	if (data) {
+      		var html='<div style="padding:0;">';
+          html+='<span style="font-size:14px;">'+date+'</span>';
+          html+='<div style="opacity:1;">￥'+data.roomrate+'</div>';
+          html+='</div>';
           return html;
-      }else{
-      	 var html='<div style="padding:0;">';
-             html+='<span style="font-size:14px;">'+date+'</span>';
-             html+='<div style="opacity:1;">已租</div>';
-             html+='</div>';
+        }else{
+        	var html='<div style="padding:0;">';
+          html+='<span style="font-size:14px;">'+date+'</span>';
+          html+='<div style="opacity:1;">已租</div>';
+          html+='</div>';
           return html;
-      }
-        
-        },
-        beforeShowDay: function(t)//禁止被选的房价
-		{
-		   var newTime = t.Format("yyyy-MM-dd");
-		   var data = arrRoomState[newTime];
-		   var valid  = false;
-            if (data != null && data != undefined) {
-            	 valid = data.isbook;  
-            }
-			
-			var _class = '';
-			var _tooltip = valid ? '' : '不能选择已定的房价';
-			return [valid,_class,_tooltip];
-		},
-        showShortcuts:false,   //去掉快捷html
-        inline:false,
-        singleMonth:false,  //true显示1个月，false为2个月
-        batchMode:true,
-        stickyMonths:true, //如果是true，只会有一个以前和一个下一个按钮。点击他们将改变两个月。
-        // extraClass:'dengcb',  //添加class
-        showTopbar:true,     //true显示确定按钮 false不显示确定按钮选择好就确定
-        selectForward:false,   //true选择开始的时间前面就不能选，默认false
-        selectBackward:false,  //true只能选择1天     
-      })
+        }      
+      },
+      beforeShowDay: function(t){//禁止被选的房价 	
+  		  var newTime = t.Format("yyyy-MM-dd");
+  		  var data = arrRoomState[newTime];
+  		  var valid  = false;
+        if (data != null && data != undefined) {
+        	 valid = data.isbook;  
+        }
+  			var _class = '';
+  			var _tooltip = valid ? '' : '不能选择已定的房价';
+  			return [valid,_class,_tooltip];
+  		},
+      showShortcuts:false,   //去掉快捷html
+      inline:false,
+      singleMonth:false,  //true显示1个月，false为2个月
+      batchMode:true,
+      stickyMonths:true, //如果是true，只会有一个以前和一个下一个按钮。点击他们将改变两个月。
+      // extraClass:'dengcb',  //添加class
+      showTopbar:true,     //true显示确定按钮 false不显示确定按钮选择好就确定
+      selectForward:false,   //true选择开始的时间前面就不能选，默认false
+      selectBackward:false,  //true只能选择1天     
+    })
   });  
 
   
